@@ -30,7 +30,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top" class:navbar-scrolled={scrolled} bind:this={navEl}>
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="/">
-            <span class="fw-bold text-primary">Sales Indihome</span>
+            <span class="fw-bold text-primary">Pasang Indihome</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" bind:this={hamburgerButton}>
             <span class="navbar-toggler-icon"></span>

@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-4 mb-4">
                 <div class="d-flex align-items-center mb-3">
-                    <span class="h5 fw-bold mb-0">Sales Indihome</span>
+                    <span class="h5 fw-bold mb-0">Pasang Indihome</span>
                 </div>
                 <p class="text-muted">Sales resmi Indihome untuk wilayah Majalengka dan Sumedang. Melayani dengan profesional dan terpercaya.</p>
                 <div class="d-flex gap-3">
