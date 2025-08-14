@@ -8,7 +8,9 @@
   let hamburgerButton;
 
   function handleScroll() {
-    scrolled = window.scrollY > 50;
+    if (browser) {
+      scrolled = window.scrollY > 50;
+    }
   }
 
   function handleBodyClick(event) {

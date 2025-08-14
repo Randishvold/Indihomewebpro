@@ -1,6 +1,5 @@
 <script>
   import 'bootstrap/dist/css/bootstrap.min.css';
-  import 'font-awesome/css/font-awesome.min.css';
   import Header from '$lib/Header.svelte';
   import Footer from '$lib/Footer.svelte';
   import '../app.css';
@@ -8,6 +7,7 @@
   import { page } from '$app/stores';
   import { browser } from '$app/environment';
   import { PUBLIC_GA_MEASUREMENT_ID } from '$env/static/public';
+  import { onMount } from 'svelte'; // Import onMount
 
   export let data;
 
@@ -18,6 +18,13 @@
       });
     }
   }
+
+  // Dynamically import Bootstrap JS only on the client
+  onMount(() => {
+    if (browser) {
+      import('bootstrap/dist/js/bootstrap.bundle.min.js');
+    }
+  });
 </script>
 
 <svelte:head>
