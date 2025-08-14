@@ -39,6 +39,7 @@
 		]
 	},
 	"dependencies": {
-		"bootstrap": "^5.3.7"
+		"bootstrap": "^5.3.7",
+		"font-awesome": "^4.7.0"
 	}
 }
