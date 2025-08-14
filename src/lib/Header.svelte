@@ -32,7 +32,7 @@
         <a class="navbar-brand d-flex align-items-center" href="/">
             <span class="fw-bold text-primary">Pasang Indihome</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" bind:this={hamburgerButton}>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" bind:this={hamburgerButton} aria-label="Buka/Tutup navigasi">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav" bind:this={collapseEl}>

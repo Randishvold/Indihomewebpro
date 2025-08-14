@@ -7,13 +7,13 @@
                 </div>
                 <p class="text-muted">Sales resmi Indihome untuk wilayah Majalengka dan Sumedang. Melayani dengan profesional dan terpercaya.</p>
                 <div class="d-flex gap-3">
-                    <a href="https://api.whatsapp.com/send?phone=6285169727821" target="_blank" class="text-white">
+                    <a href="https://api.whatsapp.com/send?phone=6285169727821" target="_blank" class="text-white" aria-label="Hubungi via WhatsApp">
                         <i class="fab fa-whatsapp fa-lg"></i>
                     </a>
-                    <a href="mailto:riri.sfim@protonmail.com" class="text-white">
+                    <a href="mailto:riri.sfim@protonmail.com" class="text-white" aria-label="Kirim email">
                         <i class="fas fa-envelope fa-lg"></i>
                     </a>
-                    <a href="tel:+6285169727821" class="text-white">
+                    <a href="tel:+6285169727821" class="text-white" aria-label="Telepon sekarang">
                         <i class="fas fa-phone fa-lg"></i>
                     </a>
                 </div>
