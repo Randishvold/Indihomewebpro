@@ -1,11 +1,4 @@
-<svelte:head>
-    <title>Sales Indihome Majalengka & Sumedang - Paket Internet Terbaik</title>
-    <meta name="description" content="Sales resmi Indihome untuk wilayah Majalengka dan Sumedang. Dapatkan paket internet fiber optic terbaik dengan harga spesial. Daftar sekarang!" />
-    <meta name="keywords" content="Sales Indihome Majalengka, Daftar Indihome Sumedang, paket internet Majalengka, wifi Sumedang, fiber optic" />
-    <meta property="og:title" content="Sales Indihome Majalengka & Sumedang - Paket Internet Terbaik" />
-    <meta property="og:description" content="Sales resmi Indihome untuk wilayah Majalengka dan Sumedang. Dapatkan paket internet fiber optic terbaik dengan harga spesial." />
-    <meta property="og:type" content="website" />
-</svelte:head>
+
 
 <script>
   import { fadeIn } from '$lib/actions.js';

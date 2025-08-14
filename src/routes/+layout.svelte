@@ -7,6 +7,8 @@
   import { browser } from '$app/environment';
   import { PUBLIC_GA_MEASUREMENT_ID } from '$env/static/public';
 
+  export let data;
+
   $: {
     if (browser && $page.url.pathname) {
       gtag('config', PUBLIC_GA_MEASUREMENT_ID, {
@@ -17,6 +19,9 @@
 </script>
 
 <svelte:head>
+  <title>{data.meta.title}</title>
+  <meta name="description" content={data.meta.description} />
+
   <!-- Google tag (gtag.js) -->
   <script
     async
