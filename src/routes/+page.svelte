@@ -98,17 +98,18 @@
             <div class="col-lg-4 col-md-6">
                 <div class="card h-100 border-0 shadow-sm" use:fadeIn>
                     <div class="card-header bg-white border-0 text-center pt-4">
-                        <h5 class="fw-bold text-primary">Paket 2P</h5>
+                        <h5 class="fw-bold text-primary">EZnet 20Mbps</h5>
                         <div class="price-display">
-                            <span class="h2 fw-bold text-dark">Rp 315.000</span>
+                            <span class="h2 fw-bold text-dark">Rp 210.800</span>
                             <small class="text-muted">/bulan</small>
                         </div>
                     </div>
                     <div class="card-body">
                         <ul class="list-unstyled">
                             <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Internet 20 Mbps</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Telepon Rumah</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Bonus WiFi Router</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Ideal Untuk 5 Perangkat</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Biaya Pasang Hanya Rp 166.500</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Harga Sudah Termasuk PPN</li>
                         </ul>
                     </div>
                     <div class="card-footer bg-white border-0 pb-4">
@@ -123,18 +124,21 @@
                 <div class="card h-100 border-primary shadow" use:fadeIn>
                     <div class="card-header bg-primary text-white text-center pt-4">
                         <div class="badge bg-warning text-dark mb-2">TERPOPULER</div>
-                        <h5 class="fw-bold">Paket 3P</h5>
+                        <h5 class="fw-bold">50Mbps Internet</h5>
                         <div class="price-display">
-                            <span class="h2 fw-bold">Rp 395.000</span>
+                            <span class="h2 fw-bold">Rp 266.400</span>
                             <small>/bulan</small>
                         </div>
                     </div>
                     <div class="card-body">
                         <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Internet 30 Mbps</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>UseeTV Cable</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Telepon Rumah</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Bonus WiFi Router</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Internet 50 Mbps</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Ideal Untuk 8 Perangkat</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Prime Video</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Catchplay+</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>IndiHomeTV</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Biaya Pasang Hanya Rp 166.500</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Harga Sudah Termasuk PPN</li>
                         </ul>
                     </div>
                     <div class="card-footer bg-white border-0 pb-4">
@@ -148,18 +152,21 @@
             <div class="col-lg-4 col-md-6 mx-auto">
                 <div class="card h-100 border-0 shadow-sm" use:fadeIn>
                     <div class="card-header bg-white border-0 text-center pt-4">
-                        <h5 class="fw-bold text-primary">Paket Gamer</h5>
+                        <h5 class="fw-bold text-primary">One Dynamic 50Mbps 30GB</h5>
                         <div class="price-display">
-                            <span class="h2 fw-bold text-dark">Rp 505.000</span>
+                            <span class="h2 fw-bold text-dark">Rp 338.550</span>
                             <small class="text-muted">/bulan</small>
                         </div>
                     </div>
                     <div class="card-body">
                         <ul class="list-unstyled">
                             <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Internet 50 Mbps</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Unlimited Gaming</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Low Latency</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Bonus WiFi Router</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Kuota Keluarga 30GB</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Prime Video</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Catchplay+</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>IndiHomeTV</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Biaya Pasang Gratis</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Harga Sudah Termasuk PPN</li>
                         </ul>
                     </div>
                     <div class="card-footer bg-white border-0 pb-4">
