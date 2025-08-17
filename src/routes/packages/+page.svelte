@@ -75,7 +75,7 @@
             {/if}
             {#each filteredPackages.filter(p => p.category === '1p') as pkg}
             <div class="col-lg-4 col-md-6 mb-4" use:fadeIn>
-                <div class="card h-100 border-0 shadow-sm">
+                <div class="card h-100">
                     <div class="card-header bg-white border-0 text-center pt-4">
                         <h5 class="fw-bold text-primary">{pkg.name}</h5>
                         <div class="price-display">
@@ -106,7 +106,7 @@
             {/if}
             {#each filteredPackages.filter(p => p.category === '3p') as pkg}
             <div class="col-lg-4 col-md-6 mb-4" use:fadeIn>
-                <div class="card h-100" class:border-primary={pkg.popular} class:shadow={pkg.popular}>
+                <div class="card h-100" class:border-primary={pkg.popular}>
                     <div class="card-header text-center pt-4" class:bg-primary={pkg.popular} class:text-white={pkg.popular}>
                         {#if pkg.popular}
                         <div class="badge bg-warning text-dark mb-2">TERPOPULER</div>
@@ -140,7 +140,7 @@
             {/if}
             {#each filteredPackages.filter(p => p.category === 'gamer') as pkg}
             <div class="col-lg-4 col-md-6 mb-4" use:fadeIn>
-                <div class="card h-100 border-0 shadow-sm">
+                <div class="card h-100">
                     <div class="card-header bg-white border-0 text-center pt-4">
                         <h5 class="fw-bold text-primary">{pkg.name}</h5>
                         <div class="price-display">
