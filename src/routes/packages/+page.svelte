@@ -14,7 +14,7 @@
     { id: 2, category: '1p', name: '50Mbps Internet', price: '266.400', features: ['Internet 50 Mbps', 'Ideal Untuk 7 Perangkat', 'Prime Video', 'Catchplay+', 'IndiHomeTV', 'Biaya Pasang Hanya Rp 166.500', 'Harga Sudah Termasuk PPN', 'Teknologi Fiber Optic'], wa_link: 'https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20Paket%201P%2050%20Mbps%20-%20Rp%20266.400' },
     { id: 3, category: '1p', name: '75Mbps Internet', price: '299.700', features: ['Internet 75 Mbps', 'Ideal Untuk 10 Perangkat', 'Prime Video', 'Catchplay+', 'IndiHomeTV', 'Biaya Pasang Hanya Rp 166.500', 'Harga Sudah Termasuk PPN', 'Teknologi Fiber Optic'], wa_link: 'https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20Paket%201P%2075%20Mbps%20-%20Rp%20299.700' },
     { id: 10, category: '1p', name: '150Mbps Internet', price: '416.250', features: ['Internet 150 Mbps', 'Ideal Untuk 16 Perangkat', 'Prime Video', 'Catchplay+', 'IndiHomeTV', 'Biaya Pasang Hanya Rp 166.500', 'Harga Sudah Termasuk PPN', 'Teknologi Fiber Optic'], wa_link: 'https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20Paket%201P%20150%20Mbps%20-%20Rp%20416.250' },
-    { id: 11, category: '1p', name: '200Mbps Internet', price: '571.650', features: ['Internet 50 Mbps', 'Ideal Untuk 20 Perangkat', 'Netflix', 'Prime Video', 'Catchplay+', 'IndiHomeTV', 'Biaya Pasang Hanya Rp 166.500', 'Harga Sudah Termasuk PPN', 'Teknologi Fiber Optic'], wa_link: 'https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20Paket%201P%20200%20Mbps%20-%20Rp%20571.650' },
+    { id: 11, category: '1p', name: '200Mbps Internet', price: '571.650', features: ['Internet 50 Mbps', 'Ideal Untuk 20 Perangkat', 'Netflix Basic', 'Prime Video', 'Catchplay+', 'IndiHomeTV', 'Biaya Pasang Hanya Rp 166.500', 'Harga Sudah Termasuk PPN', 'Teknologi Fiber Optic'], wa_link: 'https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20Paket%201P%20200%20Mbps%20-%20Rp%20571.650' },
     
     // paket 2p
     { id: 4, category: '3p', name: '3P 30 Mbps', price: '395.000', features: ['Internet 30 Mbps', 'UseeTV 113 Channel', 'Telepon Rumah 300 menit', 'WiFi Router + STB Gratis', 'Fiber Optic Premium'], popular: true, wa_link: 'https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20Paket%203P%2030%20Mbps%20-%20Rp%20395.000' },
@@ -59,8 +59,8 @@
             <div class="col-12">
                 <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
                     <button class="btn btn-outline-primary" class:active={filter === 'all'} on:click={() => setFilter('all')}>Semua Paket</button>
-                    <button class="btn btn-outline-primary" class:active={filter === '1p'} on:click={() => setFilter('1p')}>Paket 1P</button>
-                    <button class="btn btn-outline-primary" class:active={filter === '3p'} on:click={() => setFilter('3p')}>Paket 3P</button>
+                    <button class="btn btn-outline-primary" class:active={filter === '1p'} on:click={() => setFilter('1p')}>Paket Internet Only</button>
+                    <button class="btn btn-outline-primary" class:active={filter === '3p'} on:click={() => setFilter('3p')}>Paket Internet + TV</button>
                     <button class="btn btn-outline-primary" class:active={filter === 'gamer'} on:click={() => setFilter('gamer')}>Paket Gamer</button>
                 </div>
             </div>
@@ -70,7 +70,7 @@
         <div class="row" id="packagesContainer">
             {#if filter === 'all' || filter === '1p'}
             <div class="col-12 mb-4 package-section">
-                <h3 class="fw-bold text-center mb-4">Paket 1P (Internet)</h3>
+                <h3 class="fw-bold text-center mb-4">Paket Internet Only</h3>
             </div>
             {/if}
             {#each filteredPackages.filter(p => p.category === '1p') as pkg}
@@ -101,7 +101,7 @@
 
             {#if filter === 'all' || filter === '3p'}
             <div class="col-12 mb-4 package-section">
-                <h3 class="fw-bold text-center mb-4">Paket 3P (Internet + TV + Telepon)</h3>
+                <h3 class="fw-bold text-center mb-4">Paket Internet + TV</h3>
             </div>
             {/if}
             {#each filteredPackages.filter(p => p.category === '3p') as pkg}
