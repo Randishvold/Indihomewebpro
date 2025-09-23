@@ -1,38 +1,79 @@
 <svelte:head>
     <title>Paket Indihome Majalengka & Sumedang - Harga Terbaik</title>
-    <meta name="description" content="Daftar lengkap paket Indihome untuk Majalengka dan Sumedang. Internet 1P, 2P, dan OneDynamic dengan harga terjangkau. Pesan sekarang via WhatsApp!" />
-    <meta name="keywords" content="paket Indihome Majalengka, harga Indihome Sumedang, internet 1P 2P, paket OneDynamic Indihome" />
+    <meta name="description" content="Daftar lengkap paket Indihome untuk Majalengka dan Sumedang. Internet 1P, 2P, 3P, dan OneDynamic dengan harga terjangkau. Pesan sekarang via WhatsApp!" />
+    <meta name="keywords" content="paket Indihome Majalengka, harga Indihome Sumedang, internet 1P 2P 3P, paket OneDynamic Indihome" />
 </svelte:head>
 
 <script>
   import { fadeIn } from '$lib/actions.js';
   let filter = 'all';
 
-  const packages = [
-    // paket 1p internet saja
-    { id: 1, category: '1p', name: 'EZnet 20Mbps', price: '210.800', features: ['Internet 20 Mbps', 'Ideal Untuk 5 Perangkat', 'Biaya Pasang Hanya Rp 166.500', 'Harga Sudah Termasuk PPN', 'Teknologi Fiber Optic'], wa_link: 'https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20Paket%201P%2020%20Mbps%20-%20Rp%20210.800' },
-    { id: 2, category: '1p', name: '50Mbps Internet', price: '266.400', features: ['Internet 50 Mbps', 'Ideal Untuk 7 Perangkat', 'Prime Video', 'Catchplay+', 'IndiHomeTV', 'Biaya Pasang Hanya Rp 166.500', 'Harga Sudah Termasuk PPN', 'Teknologi Fiber Optic'], wa_link: 'https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20Paket%201P%2050%20Mbps%20-%20Rp%20266.400' },
-    { id: 3, category: '1p', name: '75Mbps Internet', price: '299.700', features: ['Internet 75 Mbps', 'Ideal Untuk 10 Perangkat', 'Prime Video', 'Catchplay+', 'IndiHomeTV', 'Biaya Pasang Hanya Rp 166.500', 'Harga Sudah Termasuk PPN', 'Teknologi Fiber Optic'], wa_link: 'https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20Paket%201P%2075%20Mbps%20-%20Rp%20299.700' },
-    { id: 10, category: '1p', name: '150Mbps Internet', price: '416.250', features: ['Internet 150 Mbps', 'Ideal Untuk 16 Perangkat', 'Prime Video', 'Catchplay+', 'IndiHomeTV', 'Biaya Pasang Hanya Rp 166.500', 'Harga Sudah Termasuk PPN', 'Teknologi Fiber Optic'], wa_link: 'https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20Paket%201P%20150%20Mbps%20-%20Rp%20416.250' },
-    { id: 11, category: '1p', name: '200Mbps Internet', price: '571.650', features: ['Internet 50 Mbps', 'Ideal Untuk 20 Perangkat', 'Netflix Basic', 'Prime Video', 'Catchplay+', 'IndiHomeTV', 'Biaya Pasang Hanya Rp 166.500', 'Harga Sudah Termasuk PPN', 'Teknologi Fiber Optic'], wa_link: 'https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20Paket%201P%20200%20Mbps%20-%20Rp%20571.650' },
+  const rawPackages = [
+    // --- Paket Internet Saja (1P) ---
+    { category: '1p', name: 'EZNet 20 Mbps', price: '215.900', details: { speed: '20 Mbps', install_fee: 'Rp 166.500', streaming: 'IndiHome TV', devices: '1-3' }},
+    { category: '1p', name: '50 Mbps Internet', price: '271.400', details: { speed: '50 Mbps', install_fee: 'Rp 166.500', streaming: 'IndiHome TV, Prime Video, Catchplay+', devices: '5-7' }},
+    { category: '1p', name: '75 Mbps Internet', price: '304.700', details: { speed: '75 Mbps', install_fee: 'Rp 166.500', streaming: 'IndiHome TV, Prime Video, Catchplay+', devices: '7-10' }},
+    { category: '1p', name: '150 Mbps Internet', price: '421.250', details: { speed: '150 Mbps', install_fee: 'Rp 166.500', streaming: 'IndiHome TV, Prime Video, Catchplay+', devices: '15-20' }},
+    { category: '1p', name: '200 Mbps Internet', price: '576.650', details: { speed: '200 Mbps', install_fee: 'Rp 166.500', streaming: 'IndiHome TV, Prime Video, Catchplay+, Netflix Basic', devices: '20+' }},
+    { category: '1p', name: 'Movie Standard - 30 Mbps', price: '347.990', details: { speed: '30 Mbps', install_fee: 'GRATIS', streaming: 'Vidio Platinum, WeTV, Viu, Catchplay+, dll.', devices: '3-5' }},
+    { category: '1p', name: 'Movie Standard - 50 Mbps', price: '370.190', details: { speed: '50 Mbps', install_fee: 'GRATIS', streaming: 'Vidio Platinum, WeTV, Viu, Catchplay+, dll.', devices: '5-7' }},
+    { category: '1p', name: 'Movie Standard - 100 Mbps', price: '436.790', details: { speed: '100 Mbps', install_fee: 'GRATIS', streaming: 'Vidio Platinum, WeTV, Viu, Catchplay+, dll.', devices: '10-15' }},
+    { category: '1p', name: 'Movie Premium - 30 Mbps', price: '392.390', details: { speed: '30 Mbps', install_fee: 'GRATIS', streaming: 'Netflix Basic, Disney+ Hotstar, IndihomeTV', devices: '3-5' }},
+    { category: '1p', name: 'Movie Premium - 50 Mbps', price: '414.590', details: { speed: '50 Mbps', install_fee: 'GRATIS', streaming: 'Netflix Basic, Disney+ Hotstar, IndihomeTV', devices: '5-7' }},
+    { category: '1p', name: 'Movie Premium - 100 Mbps', price: '470.090', details: { speed: '100 Mbps', install_fee: 'GRATIS', streaming: 'Netflix Basic, Disney+ Hotstar, IndihomeTV', devices: '10-15' }},
+    { category: '1p', name: 'Movie Complete - 30 Mbps', price: '447.890', details: { speed: '30 Mbps', install_fee: 'GRATIS', streaming: 'Netflix, Disney+, Prime Video, Vidio, dll.', devices: '3-5' }},
+    { category: '1p', name: 'Movie Complete - 50 Mbps', price: '470.090', details: { speed: '50 Mbps', install_fee: 'GRATIS', streaming: 'Netflix, Disney+, Prime Video, Vidio, dll.', devices: '5-7' }},
+    { category: '1p', name: 'Movie Complete - 100 Mbps', price: '525.590', details: { speed: '100 Mbps', install_fee: 'GRATIS', streaming: 'Netflix, Disney+, Prime Video, Vidio, dll.', devices: '10-15' }},
     
-    // paket 2p
-    { id: 12, category: '2p', name: '2P 20Mbps + Phone', price: '250.000', features: ['Internet 20 Mbps', 'Telepon Rumah 100 menit', 'Biaya Pasang Hanya Rp 166.500', 'Harga Sudah Termasuk PPN', 'Teknologi Fiber Optic'], wa_link: 'https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20Paket%202P%2020%20Mbps%20-%20Rp%20250.000' },
-    { id: 13, category: '2p', name: '2P 50Mbps + Phone', price: '300.000', features: ['Internet 50 Mbps', 'Telepon Rumah 100 menit', 'Biaya Pasang Hanya Rp 166.500', 'Harga Sudah Termasuk PPN', 'Teknologi Fiber Optic'], wa_link: 'https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20Paket%202P%2050%20Mbps%20-%20Rp%20300.000' },
+    // --- Paket Internet + TV (2P) ---
+    { category: 'tv', name: '50 Mbps + IndiHomeTV', price: '399.050', details: { speed: '50 Mbps', install_fee: 'Rp166.500', streaming: 'IndihomeTV, Prime Video, Catchplay, Vidio', devices: '5-7', extra: 'Termasuk STB' }},
+    { category: 'tv', name: '75 Mbps + IndiHomeTV', price: '432.350', details: { speed: '75 Mbps', install_fee: 'Rp166.500', streaming: 'IndihomeTV, Prime Video, Catchplay, Vidio', devices: '8-12', extra: 'Termasuk STB' }},
+    { category: 'tv', name: '150 Mbps + IndiHomeTV', price: '571.100', details: { speed: '150 Mbps', install_fee: 'Rp166.500', streaming: 'IndihomeTV, Prime Video, Catchplay, Vidio, dll.', devices: '15-20', extra: 'Termasuk STB' }},
+    { category: 'tv', name: '200 Mbps + IndiHomeTV', price: '726.500', details: { speed: '200 Mbps', install_fee: 'Rp166.500', streaming: 'Netflix, IndihomeTV, Prime Video, dll.', devices: '20-25', extra: 'Termasuk STB' }},
+    { category: 'tv', name: 'Netflix 30 Mbps + TV', price: '410.150', details: { speed: '30 Mbps', install_fee: 'Rp55.500', streaming: 'Netflix Basic, IndihomeTV', devices: '3-5', extra: 'Termasuk STB' }},
+    { category: 'tv', name: 'Netflix 50 Mbps + TV', price: '515.600', details: { speed: '50 Mbps', install_fee: 'GRATIS', streaming: 'Netflix Basic, IndihomeTV', devices: '5-7', extra: 'Termasuk STB' }},
+    { category: 'tv', name: 'Netflix 100 Mbps + TV', price: '621.050', details: { speed: '100 Mbps', install_fee: 'GRATIS', streaming: 'Netflix Basic, IndihomeTV', devices: '12-15', extra: 'Termasuk STB' }},
+    { category: 'tv', name: 'Movie Complete 50 Mbps + TV', price: '514.490', details: { speed: '50 Mbps', install_fee: 'GRATIS', streaming: 'Vidio, WeTV, Viu, Catchplay+, dll.', devices: '5-7', extra: 'TV Interaktif 127 channel' }},
+    { category: 'tv', name: 'Movie Complete 100 Mbps + TV', price: '592.190', details: { speed: '100 Mbps', install_fee: 'GRATIS', streaming: 'Vidio, WeTV, Viu, Catchplay+, dll.', devices: '12-15', extra: 'TV Interaktif 127 channel' }},
 
-    // paket 3p
-    { id: 4, category: 'tv', name: '3P 30 Mbps', price: '395.000', features: ['Internet 30 Mbps', 'UseeTV 113 Channel', 'Telepon Rumah 300 menit', 'WiFi Router + STB Gratis', 'Fiber Optic Premium'], popular: true, wa_link: 'https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20Paket%203P%2030%20Mbps%20-%20Rp%20395.000' },
-    { id: 5, category: 'tv', name: '3P 50 Mbps', price: '525.000', features: ['Internet 50 Mbps', 'UseeTV 113 Channel', 'Telepon Rumah 300 menit', 'WiFi Router + STB Gratis', 'Fiber Optic Premium'], wa_link: 'https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20Paket%203P%2050%20Mbps%20-%20Rp%20525.000' },
-    { id: 6, category: 'tv', name: '3P 100 Mbps', price: '675.000', features: ['Internet 100 Mbps', 'UseeTV 113 Channel', 'Telepon Rumah 300 menit', 'WiFi Router + STB Gratis', 'Fiber Optic Premium'], wa_link: 'https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20Paket%203P%20100%20Mbps%20-%20Rp%20675.000' },
+    // --- Paket Internet + Phone (2P) ---
+    { category: '2p', name: 'JITU 1 - 50 Mbps + Phone', price: '404.600', details: { speed: '50 Mbps', install_fee: 'Rp 166.500', streaming: 'Disney+ hotstar', devices: '8-12', extra: 'Bebas telepon 100 menit' }},
 
-    // paket 3p
-    { id: 14, category: '3p', name: '3P 20Mbps + Phone + TV', price: '350.000', features: ['Internet 20 Mbps', 'Telepon Rumah 100 menit', 'UseeTV 80 Channel', 'Biaya Pasang Hanya Rp 166.500', 'Harga Sudah Termasuk PPN', 'Teknologi Fiber Optic'], wa_link: 'https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20Paket%203P%2020%20Mbps%20-%20Rp%20350.000' },
-    
-    // paket onedynamic
-    { id: 7, category: 'gamer', name: 'Gamer 50 Mbps', price: '505.000', features: ['Internet 50 Mbps Dedicated', 'Low Latency Gaming', 'Unlimited Bandwidth', 'Gaming Router', 'Fiber Optic Premium'], wa_link: 'https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20Paket%20Gamer%2050%20Mbps%20-%20Rp%20505.000' },
-    { id: 8, category: 'gamer', name: 'Gamer 100 Mbps', price: '755.000', features: ['Internet 100 Mbps Dedicated', 'Ultra Low Latency', 'Unlimited Bandwidth', 'Gaming Router Premium', 'Fiber Optic Premium'], wa_link: 'https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20Paket%20Gamer%20100%20Mbps%20-%20Rp%20755.000' },
-    { id: 9, category: 'gamer', name: 'Gamer 300 Mbps', price: '1.355.000', features: ['Internet 300 Mbps Dedicated', 'Professional Gaming', 'Unlimited Bandwidth', 'Gaming Router Ultimate', 'Fiber Optic Premium'], wa_link: 'https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20Paket%20Gamer%20300%20Mbps%20-%20Rp%201.355.000' },
+    // --- Paket Internet + Phone + TV (3P) ---
+    { category: '3p', name: 'Netflix 30 Mbps + Phone + TV', price: '460.100', details: { speed: '30 Mbps', install_fee: 'Rp 55.500', streaming: 'Netflix, indihome TV', devices: '5-8', extra: 'Bebas telepon 50 menit' }},
+    { category: '3p', name: 'Netflix 50 Mbps + Phone + TV', price: '565.550', details: { speed: '50 Mbps', install_fee: 'GRATIS', streaming: 'Netflix, indihome TV, Disney+ Hotstar', devices: '8-12', extra: 'Bebas telepon 100 menit' }},
+    { category: '3p', name: 'Netflix 100 Mbps + Phone + TV', price: '659.900', details: { speed: '100 Mbps', install_fee: 'GRATIS', streaming: 'Netflix, indihome TV, Disney+ Hotstar', devices: '12-20', extra: 'Bebas telepon 50 menit' }},
+    { category: '3p', name: 'JITU 1 - 50 Mbps + Phone + TV', price: '576.650', details: { speed: '50 Mbps', install_fee: 'GRATIS', streaming: 'indihome TV, Disney+, Catchplay, WeTV, Vidio', devices: '8-12', extra: 'Bebas telepon 100 menit, Minipack TV' }},
+
+    // --- Paket OneDynamic ---
+    { category: 'onedynamic', name: 'One Dynamic 20Mbps+30GB', price: '249.200', details: { speed: '20 Mbps', install_fee: 'Rp 166.500', quota: '30 GB', devices: '3-5' }},
+    { category: 'onedynamic', name: 'One Dynamic 50Mbps 15GB', price: '315.800', details: { speed: '50 Mbps', install_fee: 'GRATIS', quota: '15 GB', devices: '5-10' }},
+    { category: 'onedynamic', name: 'One Dynamic 100Mbps 30GB', price: '404.600', details: { speed: '100 Mbps', install_fee: 'GRATIS', quota: '30 GB', devices: '10-15' }},
+    { category: 'onedynamic', name: 'One Dynamic + TV 50Mbps 15GB', price: '432.350', details: { speed: '50 Mbps', install_fee: 'GRATIS', quota: '15 GB', devices: '5-10', extra: 'Termasuk STB' }},
+    { category: 'onedynamic', name: 'One Dynamic + TV 100Mbps 30GB', price: '521.150', details: { speed: '100 Mbps', install_fee: 'GRATIS', quota: '30 GB', devices: '10-15', extra: 'Termasuk STB' }},
   ];
+
+  const packages = rawPackages.map((p, index) => {
+    const features = [];
+    if (p.details.speed) features.push(`Internet ${p.details.speed}`);
+    if (p.details.devices) features.push(`Ideal untuk ${p.details.devices} perangkat`);
+    if (p.details.quota) features.push(`Kuota Keluarga ${p.details.quota}`);
+    if (p.details.streaming) features.push(`Bonus Streaming: ${p.details.streaming}`);
+    if (p.details.extra) features.push(p.details.extra);
+    if (p.details.install_fee) features.push(`Biaya Pasang: ${p.details.install_fee}`);
+    
+    const waText = encodeURIComponent(`Halo, saya ingin daftar Paket ${p.name} - Rp ${p.price}`);
+    const wa_link = `https://api.whatsapp.com/send?phone=6285169727821&text=${waText}`;
+
+    return {
+      id: index + 1,
+      category: p.category,
+      name: p.name,
+      price: p.price,
+      features,
+      wa_link
+    };
+  });
 
   $: filteredPackages = filter === 'all' ? packages : packages.filter(p => p.category === filter);
 
@@ -42,7 +83,7 @@
 
   function trackWhatsAppClick() {
     console.log('WhatsApp link clicked');
-    // In a real application, you would add your analytics tracking code here.
+    // Analytics tracking code can be added here.
   }
 </script>
 
@@ -66,171 +107,161 @@
             <div class="col-12">
                 <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
                     <button class="btn btn-outline-primary" class:active={filter === 'all'} on:click={() => setFilter('all')}>Semua Paket</button>
-                    <button class="btn btn-outline-primary" class:active={filter === '1p'} on:click={() => setFilter('1p')}>Paket Internet Saja</button>
-                    <button class="btn btn-outline-primary" class:active={filter === '2p'} on:click={() => setFilter('2p')}>Paket Internet + Telepon</button>
-                    <button class="btn btn-outline-primary" class:active={filter === 'tv'} on:click={() => setFilter('tv')}>Paket Internet + TV</button>
-                    <button class="btn btn-outline-primary" class:active={filter === '3p'} on:click={() => setFilter('3p')}>Paket Internet + Telepon + TV</button>
-                    <button class="btn btn-outline-primary" class:active={filter === 'gamer'} on:click={() => setFilter('gamer')}>Paket Gamer</button>
+                    <button class="btn btn-outline-primary" class:active={filter === '1p'} on:click={() => setFilter('1p')}>Internet Saja</button>
+                    <button class="btn btn-outline-primary" class:active={filter === '2p'} on:click={() => setFilter('2p')}>Internet + Telepon</button>
+                    <button class="btn btn-outline-primary" class:active={filter === 'tv'} on:click={() => setFilter('tv')}>Internet + TV</button>
+                    <button class="btn btn-outline-primary" class:active={filter === '3p'} on:click={() => setFilter('3p')}>Internet + Telepon + TV</button>
+                    <button class="btn btn-outline-primary" class:active={filter === 'onedynamic'} on:click={() => setFilter('onedynamic')}>OneDynamic</button>
                 </div>
             </div>
         </div>
 
-        <!-- All Packages Container -->
-        <div class="row" id="packagesContainer">
+        <!-- Packages Container -->
+        <div class="row">
             {#if filter === 'all' || filter === '1p'}
-            <div class="col-12 mb-4 package-section">
-                <h3 class="fw-bold text-center mb-4">Paket Internet Saja</h3>
-            </div>
-            {/if}
-            {#each filteredPackages.filter(p => p.category === '1p') as pkg}
-            <div class="col-lg-4 col-md-6 mb-4" use:fadeIn>
-                <div class="card h-100">
-                    <div class="card-header bg-white border-0 text-center pt-4">
-                        <h5 class="fw-bold text-primary">{pkg.name}</h5>
-                        <div class="price-display">
-                            <span class="h2 fw-bold text-dark">Rp {pkg.price}</span>
-                            <small class="text-muted">/bulan</small>
+                <div class="col-12 mb-4"><h3 class="fw-bold text-center">Paket Internet Saja (1P)</h3></div>
+                {#each packages.filter(p => p.category === '1p') as pkg (pkg.id)}
+                    <div class="col-lg-4 col-md-6 mb-4" use:fadeIn>
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-header bg-white border-0 text-center pt-4">
+                                <h5 class="fw-bold text-primary">{pkg.name}</h5>
+                                <div class="price-display">
+                                    <span class="h2 fw-bold text-dark">Rp {pkg.price}</span>
+                                    <small class="text-muted">/bulan</small>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    {#each pkg.features as feature}
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{feature}</li>
+                                    {/each}
+                                </ul>
+                            </div>
+                            <div class="card-footer bg-white border-0 pb-4">
+                                <a href={pkg.wa_link} target="_blank" class="btn btn-primary w-100" on:click={trackWhatsAppClick}>
+                                    <i class="fab fa-whatsapp me-2"></i>Pesan Sekarang
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            {#each pkg.features as feature}
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{feature}</li>
-                            {/each}
-                        </ul>
-                    </div>
-                    <div class="card-footer bg-white border-0 pb-4">
-                        <a href={pkg.wa_link} target="_blank" class="btn btn-primary w-100" on:click={trackWhatsAppClick}>
-                            <i class="fab fa-whatsapp me-2"></i>Pesan Sekarang
-                        </a>
-                    </div>
-                </div>
-            </div>
-            {/each}
+                {/each}
+            {/if}
 
             {#if filter === 'all' || filter === '2p'}
-            <div class="col-12 mb-4 package-section">
-                <h3 class="fw-bold text-center mb-4">Paket Internet + Telepon</h3>
-            </div>
-            {/if}
-            {#each filteredPackages.filter(p => p.category === '2p') as pkg}
-            <div class="col-lg-4 col-md-6 mb-4" use:fadeIn>
-                <div class="card h-100">
-                    <div class="card-header bg-white border-0 text-center pt-4">
-                        <h5 class="fw-bold text-primary">{pkg.name}</h5>
-                        <div class="price-display">
-                            <span class="h2 fw-bold text-dark">Rp {pkg.price}</span>
-                            <small class="text-muted">/bulan</small>
+                <div class="col-12 mt-4 mb-4"><h3 class="fw-bold text-center">Paket Internet + Telepon (2P)</h3></div>
+                {#each packages.filter(p => p.category === '2p') as pkg (pkg.id)}
+                    <div class="col-lg-4 col-md-6 mb-4" use:fadeIn>
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-header bg-white border-0 text-center pt-4">
+                                <h5 class="fw-bold text-primary">{pkg.name}</h5>
+                                <div class="price-display">
+                                    <span class="h2 fw-bold text-dark">Rp {pkg.price}</span>
+                                    <small class="text-muted">/bulan</small>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    {#each pkg.features as feature}
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{feature}</li>
+                                    {/each}
+                                </ul>
+                            </div>
+                            <div class="card-footer bg-white border-0 pb-4">
+                                <a href={pkg.wa_link} target="_blank" class="btn btn-primary w-100" on:click={trackWhatsAppClick}>
+                                    <i class="fab fa-whatsapp me-2"></i>Pesan Sekarang
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            {#each pkg.features as feature}
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{feature}</li>
-                            {/each}
-                        </ul>
-                    </div>
-                    <div class="card-footer bg-white border-0 pb-4">
-                        <a href={pkg.wa_link} target="_blank" class="btn btn-primary w-100" on:click={trackWhatsAppClick}>
-                            <i class="fab fa-whatsapp me-2"></i>Pesan Sekarang
-                        </a>
-                    </div>
-                </div>
-            </div>
-            {/each}
+                {/each}
+            {/if}
 
             {#if filter === 'all' || filter === 'tv'}
-            <div class="col-12 mb-4 package-section">
-                <h3 class="fw-bold text-center mb-4">Paket Internet + TV</h3>
-            </div>
-            {/if}
-            {#each filteredPackages.filter(p => p.category === 'tv') as pkg}
-            <div class="col-lg-4 col-md-6 mb-4" use:fadeIn>
-                <div class="card h-100">
-                    <div class="card-header text-center pt-4">
-                        <h5 class="fw-bold">{pkg.name}</h5>
-                        <div class="price-display">
-                            <span class="h2 fw-bold">Rp {pkg.price}</span>
-                            <small>/bulan</small>
+                <div class="col-12 mt-4 mb-4"><h3 class="fw-bold text-center">Paket Internet + TV (2P)</h3></div>
+                {#each packages.filter(p => p.category === 'tv') as pkg (pkg.id)}
+                    <div class="col-lg-4 col-md-6 mb-4" use:fadeIn>
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-header bg-white border-0 text-center pt-4">
+                                <h5 class="fw-bold text-primary">{pkg.name}</h5>
+                                <div class="price-display">
+                                    <span class="h2 fw-bold text-dark">Rp {pkg.price}</span>
+                                    <small class="text-muted">/bulan</small>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    {#each pkg.features as feature}
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{feature}</li>
+                                    {/each}
+                                </ul>
+                            </div>
+                            <div class="card-footer bg-white border-0 pb-4">
+                                <a href={pkg.wa_link} target="_blank" class="btn btn-primary w-100" on:click={trackWhatsAppClick}>
+                                    <i class="fab fa-whatsapp me-2"></i>Pesan Sekarang
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            {#each pkg.features as feature}
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{feature}</li>
-                            {/each}
-                        </ul>
-                    </div>
-                    <div class="card-footer bg-white border-0 pb-4">
-                        <a href={pkg.wa_link} target="_blank" class="btn btn-primary w-100" on:click={trackWhatsAppClick}>
-                            <i class="fab fa-whatsapp me-2"></i>Pesan Sekarang
-                        </a>
-                    </div>
-                </div>
-            </div>
-            {/each}
+                {/each}
+            {/if}
 
             {#if filter === 'all' || filter === '3p'}
-            <div class="col-12 mb-4 package-section">
-                <h3 class="fw-bold text-center mb-4">Paket Internet + Telepon + TV</h3>
-            </div>
-            {/if}
-            {#each filteredPackages.filter(p => p.category === '3p') as pkg}
-            <div class="col-lg-4 col-md-6 mb-4" use:fadeIn>
-                <div class="card h-100">
-                    <div class="card-header bg-white border-0 text-center pt-4">
-                        <h5 class="fw-bold text-primary">{pkg.name}</h5>
-                        <div class="price-display">
-                            <span class="h2 fw-bold text-dark">Rp {pkg.price}</span>
-                            <small class="text-muted">/bulan</small>
+                <div class="col-12 mt-4 mb-4"><h3 class="fw-bold text-center">Paket Internet + Telepon + TV (3P)</h3></div>
+                {#each packages.filter(p => p.category === '3p') as pkg (pkg.id)}
+                    <div class="col-lg-4 col-md-6 mb-4" use:fadeIn>
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-header bg-white border-0 text-center pt-4">
+                                <h5 class="fw-bold text-primary">{pkg.name}</h5>
+                                <div class="price-display">
+                                    <span class="h2 fw-bold text-dark">Rp {pkg.price}</span>
+                                    <small class="text-muted">/bulan</small>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    {#each pkg.features as feature}
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{feature}</li>
+                                    {/each}
+                                </ul>
+                            </div>
+                            <div class="card-footer bg-white border-0 pb-4">
+                                <a href={pkg.wa_link} target="_blank" class="btn btn-primary w-100" on:click={trackWhatsAppClick}>
+                                    <i class="fab fa-whatsapp me-2"></i>Pesan Sekarang
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            {#each pkg.features as feature}
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{feature}</li>
-                            {/each}
-                        </ul>
-                    </div>
-                    <div class="card-footer bg-white border-0 pb-4">
-                        <a href={pkg.wa_link} target="_blank" class="btn btn-primary w-100" on:click={trackWhatsAppClick}>
-                            <i class="fab fa-whatsapp me-2"></i>Pesan Sekarang
-                        </a>
-                    </div>
-                </div>
-            </div>
-            {/each}
+                {/each}
+            {/if}
 
-            {#if filter === 'all' || filter === 'gamer'}
-            <div class="col-12 mb-4 package-section">
-                <h3 class="fw-bold text-center mb-4">Paket Gamer (Khusus Gaming)</h3>
-            </div>
-            {/if}
-            {#each filteredPackages.filter(p => p.category === 'gamer') as pkg}
-            <div class="col-lg-4 col-md-6 mb-4" use:fadeIn>
-                <div class="card h-100">
-                    <div class="card-header bg-white border-0 text-center pt-4">
-                        <h5 class="fw-bold text-primary">{pkg.name}</h5>
-                        <div class="price-display">
-                            <span class="h2 fw-bold text-dark">Rp {pkg.price}</span>
-                            <small class="text-muted">/bulan</small>
+            {#if filter === 'all' || filter === 'onedynamic'}
+                <div class="col-12 mt-4 mb-4"><h3 class="fw-bold text-center">Paket OneDynamic</h3></div>
+                {#each packages.filter(p => p.category === 'onedynamic') as pkg (pkg.id)}
+                    <div class="col-lg-4 col-md-6 mb-4" use:fadeIn>
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-header bg-white border-0 text-center pt-4">
+                                <h5 class="fw-bold text-primary">{pkg.name}</h5>
+                                <div class="price-display">
+                                    <span class="h2 fw-bold text-dark">Rp {pkg.price}</span>
+                                    <small class="text-muted">/bulan</small>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    {#each pkg.features as feature}
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{feature}</li>
+                                    {/each}
+                                </ul>
+                            </div>
+                            <div class="card-footer bg-white border-0 pb-4">
+                                <a href={pkg.wa_link} target="_blank" class="btn btn-primary w-100" on:click={trackWhatsAppClick}>
+                                    <i class="fab fa-whatsapp me-2"></i>Pesan Sekarang
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            {#each pkg.features as feature}
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{feature}</li>
-                            {/each}
-                        </ul>
-                    </div>
-                    <div class="card-footer bg-white border-0 pb-4">
-                        <a href={pkg.wa_link} target="_blank" class="btn btn-primary w-100" on:click={trackWhatsAppClick}>
-                            <i class="fab fa-whatsapp me-2"></i>Pesan Sekarang
-                        </a>
-                    </div>
-                </div>
-            </div>
-            {/each}
+                {/each}
+            {/if}
         </div>
     </div>
 </section>
