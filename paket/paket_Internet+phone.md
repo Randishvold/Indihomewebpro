@@ -1,0 +1,4 @@
+| paket Internet + Phone          |            |                  |                              |                        |                                        |                                                                     |
+| :------------------------------ | :--------- | :--------------- | :--------------------------- | :--------------------- | :------------------------------------- | :------------------------------------------------------------------ |
+| **nama paket**                  | **harga**  | **biaya pasang** | **bonus aplikasi streaming** | **kecepatan internet** | **rekomendasi devices yang terhubung** | **tambahan**                                                        |
+| JITU 1 - Internet+Phone 50 Mbps | Rp 404.600 | Rp 166.500       | Disney+ hotstar              | 50 Mbps                | 8 - 12 Devices                         | bebas telepon ke sesama telepon rumah hingga 100 menit lokal & SLJJ |
