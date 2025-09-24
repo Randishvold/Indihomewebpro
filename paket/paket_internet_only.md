@@ -16,7 +16,3 @@
 | 12. | Movie Complete - Internet 30 Mbps  | Rp 447.890 |    GRATIS    | Netflix Basic, Disney+Hotstar, Prime Video, Vidio Platinum Standard, WeTV Iflix, Viu, Catchplay+, Lionsgate Play, Sushiroll, Genflix, Kuncie, Fita, IndihomeTV |      30 Mbps       |                3-5                 |
 | 13. | Movie Complete - Internet 50 Mbps  | Rp 470.090 |    GRATIS    | Netflix Basic, Disney+Hotstar, Prime Video, Vidio Platinum Standard, WeTV Iflix, Viu, Catchplay+, Lionsgate Play, Sushiroll, Genflix, Kuncie, Fita, IndihomeTV |      50 Mbps       |                5-7                 |
 | 14. | Movie Complete - Internet 100 Mbps | Rp 525.590 |    GRATIS    | Netflix Basic, Disney+Hotstar, Prime Video, Vidio Platinum Standard, WeTV Iflix, Viu, Catchplay+, Lionsgate Play, Sushiroll, Genflix, Kuncie, Fita, IndihomeTV |      100 Mbps      |               10-15                |
-
-
-
-

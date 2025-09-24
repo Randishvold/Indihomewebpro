@@ -1,11 +1,10 @@
-
 import { PUBLIC_BASE_URL } from '$env/static/public';
 
 // Define your static pages here
 const pages = ['/', '/packages', '/service-areas', '/faq', '/contact'];
 
 export async function GET() {
-  const sitemap = `<?xml version="1.0" encoding="UTF-8" ?>
+	const sitemap = `<?xml version="1.0" encoding="UTF-8" ?>
     <urlset
       xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:xhtml="https://www.w3.org/1999/xhtml"
@@ -15,8 +14,8 @@ export async function GET() {
       xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
     >
     ${pages
-      .map(
-        (page) => `
+			.map(
+				(page) => `
       <url>
         <loc>${PUBLIC_BASE_URL}${page}</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
@@ -24,13 +23,13 @@ export async function GET() {
         <priority>0.7</priority>
       </url>
     `
-      )
-      .join('')}
+			)
+			.join('')}
     </urlset>`;
 
-  return new Response(sitemap, {
-    headers: {
-      'Content-Type': 'application/xml'
-    }
-  });
+	return new Response(sitemap, {
+		headers: {
+			'Content-Type': 'application/xml'
+		}
+	});
 }

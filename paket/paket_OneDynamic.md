@@ -28,6 +28,5 @@
 | One Dynamic + TV 150Mbps 15 GB | Rp 593.300 | GRATIS       | IndiHome TV, Prime Video, Catchplay+ | 150 Mbps           | 15 GB          | 15-20 devices                      | Berlangganan TV Indihome + STB |
 | One Dynamic + TV 150Mbps 30 GB | Rp 620.050 | GRATIS       | IndiHome TV, Prime Video, Catchplay+ | 150 Mbps           | 30 GB          | 15-20 devices                      | Berlangganan TV Indihome + STB |
 
-
 Tambahan:
 Mendapatkan kaetu perdana telkomsel maksimal 2
