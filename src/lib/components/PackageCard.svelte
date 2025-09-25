@@ -43,21 +43,3 @@
 		</div>
 	</div>
 </div>
-<style>
-	.btn-primary:hover {
-		background-color: #a00000 !important;
-		border-color: #a00000 !important;
-	}
-
-	.btn-light:hover {
-		background-color: #a00000 !important;
-		color: white !important;
-		border-color: #a00000 !important;
-	}
-
-	.btn-outline-primary:hover {
-		background-color: #a00000 !important;
-		color: white !important;
-		border-color: #a00000 !important;
-	}
-</style>

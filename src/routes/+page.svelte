@@ -92,8 +92,7 @@
 						Sales resmi kami siap memberikan respon cepat dan bantuan profesional untuk Anda.
 					</p>
 				</div>
-			</div>
-		</div>
+			</div>		</div>
 	</div>
 </section>
 
@@ -123,8 +122,7 @@
 							<li class="mb-2">
 								<i class="fas fa-check text-success me-2"></i>Ideal Untuk 5 Perangkat
 							</li>
-							<li class="mb-2">
-								<i class="fas fa-check text-success me-2"></i>Biaya Pasang Hanya Rp 166.500
+							<li class="mb-2"><i class="fas fa-check text-success me-2"></i>Biaya Pasang Hanya Rp 166.500
 							</li>
 						</ul>
 						<a
@@ -245,7 +243,7 @@
 						<i class="fas fa-map me-2"></i>Lihat Detail Area
 					</a>
 					<a
-							href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20cek%20ketersediaan%20jaringan%20di%20alamat%20saya"
+						href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20cek%20ketersediaan%20jaringan%20di%20alamat%20saya"
 						target="_blank"
 						class="btn btn-outline-primary"
 						on:click={trackWhatsAppClick}
@@ -285,21 +283,3 @@
 		</div>
 	</div>
 </section>
-<style>
-	.btn-primary:hover {
-		background-color: #a00000 !important;
-		border-color: #a00000 !important;
-	}
-
-	.btn-light:hover {
-		background-color: #a00000 !important;
-		color: white !important;
-		border-color: #a00000 !important;
-	}
-
-	.btn-outline-primary:hover {
-		background-color: #a00000 !important;
-		color: white !important;
-		border-color: #a00000 !important;
-	}
-</style>

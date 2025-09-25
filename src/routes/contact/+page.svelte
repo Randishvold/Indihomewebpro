@@ -148,7 +148,7 @@
 						</div>
 						<h5 class="fw-bold mb-3">WhatsApp</h5>
 						<p class="fw-bold text-dark mb-3">+62 851-6972-7821</p>						<a
-							href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20konsultasi%20paket%20Indihome"
+							href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20 saya%20ingin%20konsultasi%20paket%20Indihome"
 							target="_blank"
 							class="btn btn-success"
 							on:click={trackWhatsAppClick}
@@ -406,7 +406,7 @@
 		<div class="row g-3 justify-content-center">
 			<div class="col-lg-3 col-md-6">
 				<a
-					href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20paket%20Indihome%20baru"
+					href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20 saya%20ingin%20daftar%20paket%20Indihome%20baru"
 					target="_blank"
 					class="btn btn-light btn-lg w-100"
 					on:click={trackWhatsAppClick}
