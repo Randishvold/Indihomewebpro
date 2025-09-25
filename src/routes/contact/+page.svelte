@@ -143,19 +143,12 @@
 			<div class="col-lg-4 col-md-6" use:fadeIn>
 				<div class="card h-100 border-0 shadow-sm">
 					<div class="card-body text-center p-4">
-						<div
-							class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
-							style="width: 80px; height: 80px;"
-						>
-							<i class="fab fa-whatsapp text-success fa-2x"></i>
+					<div class="feature-icon-success">
+							<i class="fab fa-whatsapp fa-2x"></i>
 						</div>
 						<h5 class="fw-bold mb-3">WhatsApp</h5>
-						<p class="text-muted mb-3">
-							Chat langsung dengan sales untuk konsultasi dan pemesanan paket
-						</p>
-						<p class="fw-bold text-dark mb-3">+62 812-3456-7890</p>
-						<a
-							href="https://api.whatsapp.com/send?phone=6285169727821?text=text=Halo%2C%20saya%20ingin%20konsultasi%20paket%20Indihome"
+						<p class="fw-bold text-dark mb-3">+62 851-6972-7821</p>						<a
+							href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20konsultasi%20paket%20Indihome"
 							target="_blank"
 							class="btn btn-success"
 							on:click={trackWhatsAppClick}
@@ -170,15 +163,12 @@
 			<div class="col-lg-4 col-md-6" use:fadeIn>
 				<div class="card h-100 border-0 shadow-sm">
 					<div class="card-body text-center p-4">
-						<div
-							class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
-							style="width: 80px; height: 80px;"
-						>
-							<i class="fas fa-phone text-primary fa-2x"></i>
+					<div class="feature-icon">
+							<i class="fas fa-phone fa-2x"></i>
 						</div>
 						<h5 class="fw-bold mb-3">Telepon</h5>
 						<p class="text-muted mb-3">Hubungi langsung untuk informasi paket dan konsultasi</p>
-						<p class="fw-bold text-dark mb-3">+62 812-3456-7890</p>
+						<p class="fw-bold text-dark mb-3">+62 851-6972-7821</p>
 						<a href="tel:+6285169727821" class="btn btn-primary">
 							<i class="fas fa-phone me-2"></i>Telepon Sekarang
 						</a>
@@ -190,16 +180,13 @@
 			<div class="col-lg-4 col-md-6 mx-auto" use:fadeIn>
 				<div class="card h-100 border-0 shadow-sm">
 					<div class="card-body text-center p-4">
-						<div
-							class="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
-							style="width: 80px; height: 80px;"
-						>
-							<i class="fas fa-envelope text-info fa-2x"></i>
+					<div class="feature-icon-info">
+							<i class="fas fa-envelope fa-2x"></i>
 						</div>
 						<h5 class="fw-bold mb-3">Email</h5>
 						<p class="text-muted mb-3">Kirim pertanyaan atau permintaan informasi melalui email</p>
 						<p class="fw-bold text-dark mb-3">riri.sfim@protonmail.com</p>
-						<a href="mailto:riri.sfim@protonmail.com" class="btn btn-info text-white">
+						<a href="mailto:riri.sfim@protonmail.com" class="btn btn-primary text-white">
 							<i class="fas fa-envelope me-2"></i>Kirim Email
 						</a>
 					</div>
@@ -419,7 +406,7 @@
 		<div class="row g-3 justify-content-center">
 			<div class="col-lg-3 col-md-6">
 				<a
-					href="https://api.whatsapp.com/send?phone=6285169727821?text=text=Halo%2C%20saya%20ingin%20daftar%20paket%20Indihome%20baru"
+					href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20paket%20Indihome%20baru"
 					target="_blank"
 					class="btn btn-light btn-lg w-100"
 					on:click={trackWhatsAppClick}
@@ -429,7 +416,7 @@
 			</div>
 			<div class="col-lg-3 col-md-6">
 				<a
-					href="https://api.whatsapp.com/send?phone=6285169727821?text=text=Halo%2C%20saya%20ingin%20upgrade%20paket%20Indihome%20saya"
+					href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20 saya%20ingin%20upgrade%20paket%20Indihome%20saya"
 					target="_blank"
 					class="btn btn-light btn-lg w-100"
 					on:click={trackWhatsAppClick}
@@ -439,7 +426,7 @@
 			</div>
 			<div class="col-lg-3 col-md-6">
 				<a
-					href="https://api.whatsapp.com/send?phone=6285169727821?text=text=Halo%2C%20saya%20ingin%20cek%20ketersediaan%20jaringan%20di%20lokasi%20saya"
+					href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20 saya%20ingin%20cek%20ketersediaan%20jaringan%20di%20lokasi%20saya"
 					target="_blank"
 					class="btn btn-light btn-lg w-100"
 					on:click={trackWhatsAppClick}
@@ -449,7 +436,7 @@
 			</div>
 			<div class="col-lg-3 col-md-6">
 				<a
-					href="https://api.whatsapp.com/send?phone=6285169727821?text=text=Halo%2C%20saya%20ingin%20konsultasi%20masalah%20internet%20saya"
+					href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20 saya%20ingin%20konsultasi%20masalah%20internet%20saya"
 					target="_blank"
 					class="btn btn-light btn-lg w-100"
 					on:click={trackWhatsAppClick}
@@ -460,3 +447,22 @@
 		</div>
 	</div>
 </section>
+
+<style>
+	.btn-primary:hover {
+		background-color: #a00000 !important;
+		border-color: #a00000 !important;
+	}
+
+	.btn-light:hover {
+		background-color: #a00000 !important;
+		color: white !important;
+		border-color: #a00000 !important;
+	}
+
+	.btn-outline-primary:hover {
+		background-color: #a00000 !important;
+		color: white !important;
+		border-color: #a00000 !important;
+	}
+</style>

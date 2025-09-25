@@ -673,10 +673,8 @@
 		<div class="row g-4">
 			<div class="col-lg-3 col-md-6">
 				<div class="text-center" use:fadeIn>
-					<div
-						class="feature-icon bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-					>
-						<i class="fas fa-tools text-primary fa-2x"></i>
+					<div class="feature-icon">
+						<i class="fas fa-tools fa-2x"></i>
 					</div>
 					<h5 class="fw-bold mb-2">Fiber Optic Premium</h5>
 					<p class="text-muted">Teknologi fiber optic terdepan untuk koneksi premium</p>
@@ -685,10 +683,8 @@
 
 			<div class="col-lg-3 col-md-6">
 				<div class="text-center" use:fadeIn>
-					<div
-						class="feature-icon bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-					>
-						<i class="fas fa-wifi text-primary fa-2x"></i>
+					<div class="feature-icon">
+						<i class="fas fa-wifi fa-2x"></i>
 					</div>
 					<h5 class="fw-bold mb-2">WiFi Router Gratis</h5>
 					<p class="text-muted">Router WiFi berkualitas untuk koneksi optimal</p>
@@ -697,10 +693,8 @@
 
 			<div class="col-lg-3 col-md-6">
 				<div class="text-center" use:fadeIn>
-					<div
-						class="feature-icon bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-					>
-						<i class="fas fa-headset text-primary fa-2x"></i>
+					<div class="feature-icon">
+						<i class="fas fa-headset fa-2x"></i>
 					</div>
 					<h5 class="fw-bold mb-2">Support 24/7</h5>
 					<p class="text-muted">Customer service siap membantu kapan saja</p>
@@ -709,10 +703,8 @@
 
 			<div class="col-lg-3 col-md-6">
 				<div class="text-center" use:fadeIn>
-					<div
-						class="feature-icon bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-					>
-						<i class="fas fa-shield-alt text-primary fa-2x"></i>
+					<div class="feature-icon">
+						<i class="fas fa-shield-alt fa-2x"></i>
 					</div>
 					<h5 class="fw-bold mb-2">Garansi Kualitas</h5>
 					<p class="text-muted">Jaminan kualitas jaringan fiber optic terbaik</p>
@@ -737,3 +729,22 @@
 		</a>
 	</div>
 </section>
+
+<style>
+	.btn-primary:hover {
+		background-color: #a00000 !important;
+		border-color: #a00000 !important;
+	}
+
+	.btn-light:hover {
+		background-color: #a00000 !important;
+		color: white !important;
+		border-color: #a00000 !important;
+	}
+
+	.btn-outline-primary:hover {
+		background-color: #a00000 !important;
+		color: white !important;
+		border-color: #a00000 !important;
+	}
+</style>

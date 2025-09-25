@@ -44,7 +44,7 @@
 			category: 'instalasi',
 			question: 'Bagaimana cara cek ketersediaan jaringan di alamat saya?',
 			answer:
-				'<p>Cara cek ketersediaan jaringan:</p><ul><li>Hubungi sales kami via WhatsApp dengan menyertakan alamat lengkap</li><li>Kunjungi halaman Area Layanan di website ini</li><li>Sales akan melakukan pengecekan database coverage area</li><li>Jika belum tersedia, kami akan catat untuk ekspansi jaringan selanjutnya</li></ul><a href="https://api.whatsapp.com/send?phone=6285169727821?text=text=Halo%2C%20saya%20ingin%20cek%20ketersediaan%20jaringan" target="_blank" class="btn btn-success btn-sm"><i class="fab fa-whatsapp me-1"></i> Cek Sekarang</a>'
+				'<p>Cara cek ketersediaan jaringan:</p><ul><li>Hubungi sales kami via WhatsApp dengan menyertakan alamat lengkap</li><li>Kunjungi halaman Area Layanan di website ini</li><li>Sales akan melakukan pengecekan database coverage area</li><li>Jika belum tersedia, kami akan catat untuk ekspansi jaringan selanjutnya</li></ul><a href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20cek%20ketersediaan%20jaringan" target="_blank" class="btn btn-success btn-sm"><i class="fab fa-whatsapp me-1"></i> Cek Sekarang</a>'
 		},
 		{
 			id: 7,
@@ -86,7 +86,7 @@
 			category: 'layanan',
 			question: 'Bagaimana cara menghubungi customer service?',
 			answer:
-				'<p><strong>Kontak Customer Service Indihome:</strong></p><ul><li><strong>Telepon:</strong> 147 (24/7 gratis)</li><li><strong>WhatsApp Sales:</strong> +62 812-3456-7890</li><li><strong>MyIndihome App:</strong> Chat dengan CS</li><li><strong>Twitter:</strong> @TelkomCare</li><li><strong>Website:</strong> indihome.co.id</li></ul><p><strong>Sales lokal Majalengka & Sumedang:</strong> Hubungi WhatsApp kami untuk bantuan personal</p>'
+				'<p><strong>Kontak Customer Service Indihome:</strong></p><ul><li><strong>Telepon:</strong> 147 (24/7 gratis)</li><li><strong>WhatsApp Sales:</strong> +62 851-6972-7821</li><li><strong>MyIndihome App:</strong> Chat dengan CS</li><li><strong>Twitter:</strong> @TelkomCare</li><li><strong>Website:</strong> indihome.co.id</li></ul><p><strong>Sales lokal Majalengka & Sumedang:</strong> Hubungi WhatsApp kami untuk bantuan personal</p>'
 		},
 		{
 			id: 13,
@@ -244,7 +244,7 @@
 				<p class="text-muted mb-4">Tim sales kami siap membantu Anda dengan pertanyaan apapun</p>
 				<div class="d-flex flex-wrap justify-content-center gap-3">
 					<a
-						href="https://api.whatsapp.com/send?phone=6285169727821?text=text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20Indihome"
+						href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20Indihome"
 						target="_blank"
 						class="btn btn-success btn-lg"
 						on:click={trackWhatsAppClick}
@@ -259,3 +259,21 @@
 		</div>
 	</div>
 </section>
+<style>
+	.btn-primary:hover {
+		background-color: #a00000 !important;
+		border-color: #a00000 !important;
+	}
+
+	.btn-light:hover {
+		background-color: #a00000 !important;
+		color: white !important;
+		border-color: #a00000 !important;
+	}
+
+	.btn-outline-primary:hover {
+		background-color: #a00000 !important;
+		color: white !important;
+		border-color: #a00000 !important;
+	}
+</style>

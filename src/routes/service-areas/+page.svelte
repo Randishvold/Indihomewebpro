@@ -251,13 +251,13 @@
 
 						<div class="mt-4">
 							<a
-								href="https://api.whatsapp.com/send?phone=6285169727821?text=text=Halo%2C%20saya%20ingin%20cek%20ketersediaan%20jaringan%20di%20Majalengka"
-								target="_blank"
-								class="btn btn-outline-primary"
-								on:click={trackWhatsAppClick}
-							>
-								<i class="fab fa-whatsapp me-2"></i>Cek Jaringan Majalengka
-							</a>
+							href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20cek%20ketersediaan%20jaringan%20di%20Majalengka"
+							target="_blank"
+							class="btn btn-outline-primary"
+							on:click={trackWhatsAppClick}
+						>
+							<i class="fab fa-whatsapp me-2"></i>Cek Jaringan Majalengka
+						</a>
 						</div>
 					</div>
 				</div>
@@ -333,13 +333,13 @@
 
 						<div class="mt-4">
 							<a
-								href="https://api.whatsapp.com/send?phone=6285169727821?text=text=Halo%2C%20saya%20ingin%20cek%20ketersediaan%20jaringan%20di%20Sumedang"
-								target="_blank"
-								class="btn btn-outline-primary"
-								on:click={trackWhatsAppClick}
-							>
-								<i class="fab fa-whatsapp me-2"></i>Cek Jaringan Sumedang
-							</a>
+							href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20cek%20ketersediaan%20jaringan%20di%20Sumedang"
+							target="_blank"
+							class="btn btn-outline-primary"
+							on:click={trackWhatsAppClick}
+						>
+							<i class="fab fa-whatsapp me-2"></i>Cek Jaringan Sumedang
+						</a>
 						</div>
 					</div>
 				</div>
@@ -361,11 +361,8 @@
 		<div class="row g-4">
 			<div class="col-lg-3 col-md-6">
 				<div class="text-center" use:fadeIn>
-					<div
-						class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-						style="width: 80px; height: 80px;"
-					>
-						<i class="fas fa-map text-primary fa-2x"></i>
+					<div class="feature-icon">
+						<i class="fas fa-map fa-2x"></i>
 					</div>
 					<h3 class="fw-bold text-primary">2</h3>
 					<p class="text-muted">Kabupaten</p>
@@ -374,11 +371,8 @@
 
 			<div class="col-lg-3 col-md-6">
 				<div class="text-center" use:fadeIn>
-					<div
-						class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-						style="width: 80px; height: 80px;"
-					>
-						<i class="fas fa-map-marker-alt text-primary fa-2x"></i>
+					<div class="feature-icon">
+						<i class="fas fa-map-marker-alt fa-2x"></i>
 					</div>
 					<h3 class="fw-bold text-primary">38</h3>
 					<p class="text-muted">Kecamatan</p>
@@ -387,11 +381,8 @@
 
 			<div class="col-lg-3 col-md-6">
 				<div class="text-center" use:fadeIn>
-					<div
-						class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-						style="width: 80px; height: 80px;"
-					>
-						<i class="fas fa-home text-primary fa-2x"></i>
+					<div class="feature-icon">
+						<i class="fas fa-home fa-2x"></i>
 					</div>
 					<h3 class="fw-bold text-primary">95%</h3>
 					<p class="text-muted">Coverage Area</p>
@@ -400,11 +391,8 @@
 
 			<div class="col-lg-3 col-md-6">
 				<div class="text-center" use:fadeIn>
-					<div
-						class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-						style="width: 80px; height: 80px;"
-					>
-						<i class="fas fa-users text-primary fa-2x"></i>
+					<div class="feature-icon">
+						<i class="fas fa-users fa-2x"></i>
 					</div>
 					<h3 class="fw-bold text-primary">10K+</h3>
 					<p class="text-muted">Pelanggan</p>
@@ -498,7 +486,7 @@
 		<h2 class="fw-bold mb-3">Cek Ketersediaan di Alamat Anda</h2>
 		<p class="lead mb-4">Pastikan fiber optic Indihome sudah tersedia di lokasi Anda</p>
 		<a
-			href="https://api.whatsapp.com/send?phone=6285169727821?text=text=Halo%2C%20saya%20ingin%20cek%20ketersediaan%20jaringan%20Indihome%20di%20alamat%20saya"
+			href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20cek%20ketersediaan%20jaringan%20Indihome%20di%20alamat%20saya"
 			target="_blank"
 			class="btn btn-light btn-lg"
 			on:click={trackWhatsAppClick}
@@ -507,3 +495,22 @@
 		</a>
 	</div>
 </section>
+
+<style>
+	.btn-primary:hover {
+		background-color: #a00000 !important;
+		border-color: #a00000 !important;
+	}
+
+	.btn-light:hover {
+		background-color: #a00000 !important;
+		color: white !important;
+		border-color: #a00000 !important;
+	}
+
+	.btn-outline-primary:hover {
+		background-color: #a00000 !important;
+		color: white !important;
+		border-color: #a00000 !important;
+	}
+</style>
