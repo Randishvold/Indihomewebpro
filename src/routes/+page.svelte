@@ -92,7 +92,8 @@
 						Sales resmi kami siap memberikan respon cepat dan bantuan profesional untuk Anda.
 					</p>
 				</div>
-			</div>		</div>
+			</div>
+		</div>
 	</div>
 </section>
 
