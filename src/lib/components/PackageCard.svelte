@@ -19,7 +19,7 @@
 <div class="col-lg-4 col-md-6 mb-4" use:fadeIn>
 	<div class="card h-100">
 		<div class="card-body d-flex flex-column p-5">
-			<h5 class="fw-bold text-primary">{pkg.name}</h5>
+			<h3 class="fw-bold text-primary">{pkg.name}</h3>
 			<div class="price-display my-4">
 				<span class="display-5 fw-bold">Rp {pkg.price}</span>
 				<small class="text-muted">/bulan</small>

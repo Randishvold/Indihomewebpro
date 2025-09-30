@@ -411,3 +411,20 @@ footer .text-muted {
     font-size: 2.5rem;
   }
 }
+
+/* Fix for low contrast on popular package card price */
+.card.border-primary .price-display .fw-bold,
+.card-header.bg-primary .price-display .fw-bold {
+    color: #FFFFFF !important; /* Membuat teks harga menjadi putih di background merah */
+}
+
+/* Fix for low contrast on outline button */
+.btn-outline-primary {
+    /* Sedikit menggelapkan warna teks agar lebih kontras di background terang */
+    color: #a00000; 
+}
+
+.btn-outline-primary:hover {
+    /* Pastikan warna teks tetap putih saat di-hover */
+    color: white !important;
+}

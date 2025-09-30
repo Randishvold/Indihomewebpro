@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row gy-4">
 			<div class="col-lg-4">
-				<h5 class="fw-bold mb-3">Pasang Indihome</h5>
+				<h5 class="fw-bold mb-3">pasang Indihome</h5>
 				<p class="text-muted">
 					Sales resmi Indihome untuk wilayah Majalengka dan Sumedang. Melayani dengan profesional
 					dan terpercaya.
@@ -25,11 +25,11 @@
 				</div>
 			</div>
 			<div class="col-lg-2 col-6">
-				<h6 class="fw-bold mb-3">Menu</h6>
+				<p class="fw-bold mb-3">Menu</p>
 				<ul class="list-unstyled">
 					<li class="mb-2"><a href="/" data-sveltekit-preload-data="hover">Beranda</a></li>
 					<li class="mb-2">
-						<a href="/packages" data-sveltekit-preload-data="hover">Paket</a>
+						<a href="/packages" data-sveltekit-preload-data="hover">paket</a>
 					</li>
 					<li class="mb-2">
 						<a href="/service-areas" data-sveltekit-preload-data="hover">Area Layanan</a>
@@ -41,7 +41,7 @@
 				</ul>
 			</div>
 			<div class="col-lg-3 col-6">
-				<h6 class="fw-bold mb-3">Area Layanan</h6>
+				<p class="fw-bold mb-3">Area Layanan</p>
 				<ul class="list-unstyled">
 					<li class="mb-2"><span class="text-muted">Kabupaten Majalengka</span></li>
 					<li class="mb-2"><span class="text-muted">Kabupaten Sumedang</span></li>
@@ -49,7 +49,7 @@
 				</ul>
 			</div>
 			<div class="col-lg-3">
-				<h6 class="fw-bold mb-3">Info Kontak</h6>
+				<p class="fw-bold mb-3">Info Kontak</p>
 				<ul class="list-unstyled">
 					<li class="d-flex align-items-start mb-2">
 						<i class="fab fa-whatsapp me-3 mt-1"></i>

@@ -56,7 +56,7 @@
 					>
 						<i class="fas fa-bolt text-primary fa-2x"></i>
 					</div>
-					<h5 class="fw-bold mb-3">Kecepatan Tinggi</h5>
+					<h3 class="fw-bold mb-3">Kecepatan Tinggi</h3>
 					<p class="text-muted">
 						Streaming film 4K, main game online, dan video call lancar dengan kecepatan hingga 300
 						Mbps.
@@ -72,7 +72,7 @@
 					>
 						<i class="fas fa-shield-alt text-primary fa-2x"></i>
 					</div>
-					<h5 class="fw-bold mb-3">Jaringan Stabil</h5>
+					<h3 class="fw-bold mb-3">Jaringan Stabil</h3>
 					<p class="text-muted">
 						Koneksi andal 24/7 berkat teknologi fiber optic terdepan, minim gangguan cuaca.
 					</p>
@@ -87,7 +87,7 @@
 					>
 						<i class="fas fa-headset text-primary fa-2x"></i>
 					</div>
-					<h5 class="fw-bold mb-3">Layanan Prioritas</h5>
+					<h3 class="fw-bold mb-3">Layanan Prioritas</h3>
 					<p class="text-muted">
 						Sales resmi kami siap memberikan respon cepat dan bantuan profesional untuk Anda.
 					</p>
@@ -113,7 +113,7 @@
 			<div class="col-lg-4 col-md-6" use:fadeIn>
 				<div class="card">
 					<div class="card-body p-5">
-						<h5 class="fw-bold text-primary">EZnet 20Mbps</h5>
+						<h3 class="fw-bold text-primary">EZnet 20Mbps</h3>
 						<div class="price-display my-4">
 							<span class="display-5 fw-bold">Rp 210.800</span>
 							<small class="text-muted">/bulan</small>
@@ -142,7 +142,7 @@
 				<div class="card border-2 border-primary">
 					<div class="card-body p-5">
 						<div class="badge bg-primary text-white mb-3">TERPOPULER</div>
-						<h5 class="fw-bold text-primary">50Mbps Internet</h5>
+						<h3 class="fw-bold text-primary">50Mbps Internet</h3>
 						<div class="price-display my-4">
 							<span class="display-5 fw-bold">Rp 266.400</span>
 							<small class="text-muted">/bulan</small>
@@ -170,7 +170,7 @@
 			<div class="col-lg-4 col-md-6" use:fadeIn={{ delay: 400 }}>
 				<div class="card">
 					<div class="card-body p-5">
-						<h5 class="fw-bold text-primary">One Dynamic 50Mbps</h5>
+						<h3 class="fw-bold text-primary">One Dynamic 50Mbps</h3>
 						<div class="price-display my-4">
 							<span class="display-5 fw-bold">Rp 338.550</span>
 							<small class="text-muted">/bulan</small>
