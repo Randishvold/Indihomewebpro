@@ -428,3 +428,99 @@ footer .text-muted {
     /* Pastikan warna teks tetap putih saat di-hover */
     color: white !important;
 }
+
+.navbar {
+  padding: 1.5rem 0;
+  background-color: transparent; /* Awalnya transparan */
+  transition: all 0.4s ease-out; /* Animasi transisi yang lebih halus */
+}
+
+/* Style Navbar saat di-scroll */
+.navbar-scrolled {
+  background-color: rgba(255, 255, 255, 0.85); /* Warna putih semi-transparan */
+  backdrop-filter: saturate(180%) blur(15px); /* Efek blur modern */
+  -webkit-backdrop-filter: saturate(180%) blur(15px); /* Untuk Safari */
+  padding: 1rem 0;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  transition: all 0.3s ease;
+}
+.navbar-brand:hover {
+  opacity: 0.8;
+}
+
+/* Animasi untuk garis bawah link navigasi */
+.navbar-nav .nav-link {
+  position: relative;
+  transition: color 0.3s ease-out;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Kustomisasi Tampilan Mobile */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: var(--color-background);
+    padding: 1.5rem;
+    margin-top: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow-hover);
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .navbar-nav .nav-link.active::after {
+    transform: translateX(-50%) scaleX(0.3); /* Underline lebih kecil di mobile */
+  }
+}
+
+/* Memberi ruang di atas konten utama seukuran tinggi navbar */
+main {
+  padding-top: 80px; /* Sesuaikan angka ini jika perlu */
+}
+
+/* Mengurangi padding atas di section pertama setelah main */
+main > section:first-child {
+    padding-top: 0;
+}
+
+/* ===== PERBAIKAN WEBSITE ===== */
+
+/* 1. Mencegah horizontal scroll di seluruh halaman */
+body {
+  overflow-x: hidden;
+}
+
+/* 2. Memastikan menu mobile SELALU punya background putih */
+/* Ini penting untuk versi build agar tidak transparan */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: var(--color-background) !important; 
+    padding: 1.5rem;
+    margin-top: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow-hover);
+    border: 1px solid var(--color-border);
+  }
+}
