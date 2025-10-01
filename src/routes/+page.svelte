@@ -9,15 +9,17 @@
 	}
 
 	onMount(() => {
-		// Ensure hero section is prioritized
+		// Prioritize hero content for LCP
 		heroLoaded = true;
 	});
 </script>
 
-<section class="hero-section">
+<!-- Hero Section - CRITICAL for LCP -->
+<section class="hero-section critical-content">
 	<div class="container">
 		<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
 			<div class="lg:col-span-7 xl:col-span-6 text-center lg:text-left">
+				<!-- LCP Element - No animations, immediate render -->
 				<h1 class="display-4 fw-bold mb-6 text-4xl lg:text-5xl">
 					Koneksi Internet Cepat & Stabil di Majalengka dan Sumedang
 				</h1>
@@ -43,7 +45,7 @@
 	</div>
 </section>
 
-<!-- Features Section -->
+<!-- Features Section - Lazy loaded below fold -->
 <section class="py-12">
 	<div class="container">
 		<div class="text-center mb-8 max-w-4xl mx-auto">
@@ -69,7 +71,7 @@
 				</div>
 			</div>
 
-			<div class="text-center" use:fadeIn={{ delay: 100 }}>
+			<div class="text-center" use:fadeIn={{ delay: 50 }}>
 				<div class="card p-6 gpu-accelerated">
 					<div class="feature-icon mx-auto">
 						<i class="fas fa-shield-alt text-2xl"></i>
@@ -81,7 +83,7 @@
 				</div>
 			</div>
 
-			<div class="text-center" use:fadeIn={{ delay: 200 }}>
+			<div class="text-center" use:fadeIn={{ delay: 100 }}>
 				<div class="card p-6 gpu-accelerated">
 					<div class="feature-icon mx-auto">
 						<i class="fas fa-headset text-2xl"></i>
@@ -137,7 +139,7 @@
 				</div>
 			</div>
 
-			<div class="max-w-md mx-auto lg:mx-0" use:fadeIn={{ delay: 100 }}>
+			<div class="max-w-md mx-auto lg:mx-0" use:fadeIn={{ delay: 50 }}>
 				<div class="card border-2 border-primary gpu-accelerated">
 					<div class="card-body">
 						<div class="inline-block bg-primary text-white px-3 py-1 rounded text-sm mb-4">TERPOPULER</div>
@@ -166,7 +168,7 @@
 				</div>
 			</div>
 
-			<div class="max-w-md mx-auto lg:mx-0" use:fadeIn={{ delay: 200 }}>
+			<div class="max-w-md mx-auto lg:mx-0" use:fadeIn={{ delay: 100 }}>
 				<div class="card gpu-accelerated">
 					<div class="card-body">
 						<h3 class="fw-bold text-primary text-xl mb-2">One Dynamic 50Mbps</h3>
@@ -217,7 +219,7 @@
 					</p>
 				</div>
 			</div>
-			<div use:fadeIn={{ delay: 100 }}>
+			<div use:fadeIn={{ delay: 50 }}>
 				<h2 class="fw-bold text-gray-800 mb-6 text-2xl lg:text-3xl">Area Layanan Kami</h2>
 				<p class="text-muted mb-6 text-xl">
 					Kami berkomitmen untuk menyediakan layanan terbaik di seluruh wilayah cakupan kami.

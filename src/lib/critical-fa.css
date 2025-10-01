@@ -1,0 +1,43 @@
+/* Minimal Font Awesome CSS - hanya untuk icon yang digunakan */
+.fas, .fab {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands";
+  font-weight: 900;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.fab {
+  font-weight: 400;
+}
+
+/* Icon definitions - hanya yang benar-benar digunakan */
+.fa-rocket::before { content: "\f135"; }
+.fa-whatsapp::before { content: "\f232"; }
+.fa-bolt::before { content: "\f0e7"; }
+.fa-shield-alt::before { content: "\f3ed"; }
+.fa-headset::before { content: "\f590"; }
+.fa-check::before { content: "\f00c"; }
+.fa-map-marked-alt::before { content: "\f5a0"; }
+.fa-map-marker-alt::before { content: "\f3c5"; }
+.fa-map::before { content: "\f279"; }
+.fa-search::before { content: "\f002"; }
+.fa-envelope::before { content: "\f0e0"; }
+
+/* Text utilities */
+.text-green-500 { color: #10b981; }
+.text-primary { color: #c50000; }
+.text-2xl { font-size: 1.5rem; }
+.text-4xl { font-size: 2.25rem; }
+.text-6xl { font-size: 3.75rem; }
+
+/* Margin utilities */
+.mr-2 { margin-right: 0.5rem; }
+.mr-3 { margin-right: 0.75rem; }
+.mr-4 { margin-right: 1rem; }
+.mt-1 { margin-top: 0.25rem; }
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.block { display: block; }

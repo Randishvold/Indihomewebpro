@@ -1,4 +1,4 @@
-/* src/app.css - Optimized for performance */
+/* src/app.css - Optimized for mobile performance */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
@@ -16,7 +16,7 @@
 
   /* Load custom fonts when available */
   .fonts-loaded body {
-    font-family: theme('fontFamily.sans');
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
 
   .fonts-loaded h1, 
@@ -25,7 +25,7 @@
   .fonts-loaded h4, 
   .fonts-loaded h5, 
   .fonts-loaded h6 {
-    font-family: theme('fontFamily.heading');
+    font-family: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -83,15 +83,20 @@
     @apply text-white bg-primary font-semibold;
   }
 
-  /* Hero section - critical styles */
+  /* Hero section - optimized for LCP */
   .hero-section {
     @apply min-h-screen flex items-center py-24;
     background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%);
     color: white;
+    /* Optimize for LCP */
+    contain: layout style paint;
   }
 
   .hero-section .display-4 {
     @apply text-white font-bold;
+    /* Optimize text rendering */
+    text-rendering: optimizeSpeed;
+    font-synthesis: none;
   }
 
   .hero-section .lead {
@@ -106,6 +111,7 @@
   /* Cards - optimized */
   .card {
     @apply bg-white border border-gray-200 rounded-xl shadow-lg transition-all duration-200 h-full overflow-hidden;
+    contain: layout style;
   }
 
   .card:hover {
@@ -132,6 +138,10 @@
 
   .btn-outline-primary {
     @apply text-primary-dark border-2 border-primary bg-transparent hover:bg-primary hover:text-white;
+  }
+
+  .btn-outline-secondary {
+    @apply text-white border-2 border-gray-300 bg-transparent hover:bg-white hover:text-gray-800;
   }
 
   .btn-light {
@@ -179,11 +189,12 @@
     @apply py-8;
   }
 
-  /* Animation classes */
+  /* Animation classes - optimized for performance */
   .fade-in {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    will-change: opacity, transform;
   }
 
   .fade-in.visible {
@@ -201,6 +212,7 @@
     
     .hero-section {
       @apply py-16;
+      min-height: 100svh; /* Use small viewport units for mobile */
     }
     
     .py-12 {
@@ -212,7 +224,8 @@
   .gpu-accelerated {
     transform: translateZ(0);
     backface-visibility: hidden;
-    perspective: 1000;
+    perspective: 1000px;
+    will-change: transform;
   }
 
   /* Reduce motion for accessibility */
@@ -224,5 +237,14 @@
     .btn, .card, .nav-link {
       transition: none;
     }
+    
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  /* Critical content prioritization */
+  .critical-content {
+    contain: layout style paint;
   }
 }

@@ -22,6 +22,8 @@
 				color: #1f2937; 
 				background: #fff;
 			}
+			
+			/* Navbar critical styles */
 			.navbar { 
 				position: fixed; 
 				top: 0; 
@@ -31,7 +33,10 @@
 				background: rgba(248, 249, 250, 0.95); 
 				backdrop-filter: blur(10px);
 				padding: 1rem 0;
+				border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 			}
+			
+			/* Hero section critical styles */
 			.hero-section { 
 				min-height: 100vh; 
 				display: flex; 
@@ -40,12 +45,116 @@
 				color: white; 
 				padding-top: 6rem;
 			}
+			
+			/* Container */
 			.container { 
 				max-width: 1280px; 
 				margin: 0 auto; 
 				padding: 0 1rem; 
 			}
-			/* Fade in animation for smoother loading */
+			
+			/* Critical grid */
+			.grid { display: grid; }
+			.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+			@media (min-width: 1024px) {
+				.lg\\:grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+				.lg\\:col-span-7 { grid-column: span 7 / span 7; }
+				.xl\\:col-span-6 { grid-column: span 6 / span 6; }
+			}
+			
+			/* Critical text styles */
+			.text-center { text-align: center; }
+			@media (min-width: 1024px) {
+				.lg\\:text-left { text-align: left; }
+			}
+			
+			/* Hero text critical styling */
+			.display-4 {
+				font-size: 2.25rem;
+				font-weight: 700;
+				line-height: 1.1;
+				margin-bottom: 1.5rem;
+				color: white;
+			}
+			@media (min-width: 1024px) {
+				.lg\\:text-5xl { font-size: 3rem; }
+			}
+			
+			.lead {
+				font-size: 1.125rem;
+				color: rgba(255, 255, 255, 0.9);
+				margin-bottom: 2rem;
+				max-width: 32rem;
+			}
+			
+			/* Critical button styles */
+			.btn {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0.75rem 1.5rem;
+				font-weight: 600;
+				border-radius: 0.5rem;
+				text-decoration: none;
+				transition: all 0.2s;
+				border: 2px solid transparent;
+			}
+			
+			.btn-primary {
+				background-color: #c50000;
+				color: white;
+				border-color: #c50000;
+			}
+			
+			.btn-primary:hover {
+				background-color: #a00000;
+				border-color: #a00000;
+			}
+			
+			.btn-outline-secondary {
+				color: white;
+				border-color: rgba(255, 255, 255, 0.5);
+				background: transparent;
+			}
+			
+			.btn-outline-secondary:hover {
+				background-color: rgba(255, 255, 255, 0.1);
+				border-color: white;
+			}
+			
+			.btn-lg {
+				padding: 1rem 2rem;
+				font-size: 1.125rem;
+			}
+			
+			/* Flex utilities */
+			.flex { display: flex; }
+			.flex-wrap { flex-wrap: wrap; }
+			.gap-3 { gap: 0.75rem; }
+			.justify-center { justify-content: center; }
+			@media (min-width: 1024px) {
+				.lg\\:justify-start { justify-content: flex-start; }
+			}
+			
+			/* Spacing */
+			.mb-6 { margin-bottom: 1.5rem; }
+			.mb-8 { margin-bottom: 2rem; }
+			.mr-2 { margin-right: 0.5rem; }
+			.gap-8 { gap: 2rem; }
+			
+			/* Font Awesome placeholder untuk icons */
+			.fa, .fas, .fab {
+				font-style: normal;
+				font-variant: normal;
+				text-rendering: auto;
+				line-height: 1;
+			}
+			
+			/* Basic icon placeholders */
+			.fa-rocket::before { content: "🚀"; }
+			.fa-whatsapp::before { content: "💬"; }
+			
+			/* Animation classes */
 			.fade-in { 
 				opacity: 0; 
 				transform: translateY(20px); 
@@ -54,6 +163,13 @@
 			.fade-in.visible { 
 				opacity: 1; 
 				transform: translateY(0); 
+			}
+			
+			/* Media queries for responsive text */
+			@media (max-width: 640px) {
+				.display-4 { font-size: 2rem; }
+				.hero-section { padding-top: 5rem; padding-bottom: 2rem; }
+				.container { padding: 0 1rem; }
 			}
 		</style>
 
