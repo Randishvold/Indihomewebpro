@@ -12,7 +12,7 @@
   font-weight: 400;
 }
 
-/* Icon definitions - hanya yang benar-benar digunakan */
+/* Icon definitions - semua icon yang digunakan di website */
 .fa-rocket::before { content: "\f135"; }
 .fa-whatsapp::before { content: "\f232"; }
 .fa-bolt::before { content: "\f0e7"; }
@@ -24,6 +24,23 @@
 .fa-map::before { content: "\f279"; }
 .fa-search::before { content: "\f002"; }
 .fa-envelope::before { content: "\f0e0"; }
+
+/* Ikon yang hilang di halaman packages - benefits section */
+.fa-tools::before { content: "\f7d9"; }
+.fa-wifi::before { content: "\f1eb"; }
+
+/* Ikon yang hilang di halaman service-areas */
+.fa-check-circle::before { content: "\f058"; }
+.fa-home::before { content: "\f015"; }
+.fa-users::before { content: "\f0c0"; }
+
+/* Ikon yang hilang di halaman contact */
+.fa-phone::before { content: "\f095"; }
+.fa-clock::before { content: "\f017"; }
+.fa-info-circle::before { content: "\f05a"; }
+.fa-plus::before { content: "\f067"; }
+.fa-arrow-up::before { content: "\f062"; }
+.fa-paper-plane::before { content: "\f1d8"; }
 
 /* Text utilities */
 .text-green-500 { color: #10b981; }
@@ -41,3 +58,60 @@
 .mb-4 { margin-bottom: 1rem; }
 .mb-6 { margin-bottom: 1.5rem; }
 .block { display: block; }
+
+/* Bootstrap-like utilities yang hilang */
+.me-2 { margin-right: 0.5rem; }
+.fa-2x { font-size: 2em; }
+
+/* Feature icon classes yang hilang */
+.feature-icon-success {
+  width: 5rem;
+  height: 5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  background-color: #dcfce7;
+  color: #16a34a;
+  border: 2px solid #16a34a;
+}
+
+.feature-icon-info {
+  width: 5rem;
+  height: 5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  background-color: #dbeafe;
+  color: #0284c7;
+  border: 2px solid #0284c7;
+}
+
+/* Bootstrap grid yang hilang */
+.row { display: flex; flex-wrap: wrap; }
+.col-12 { width: 100%; }
+.col-lg-3 { width: 25%; }
+.col-lg-4 { width: 33.333333%; }
+.col-md-6 { width: 50%; }
+.g-4 > * { padding: 0.5rem; }
+.mb-5 { margin-bottom: 3rem; }
+
+/* Button styles yang hilang */
+.btn-success {
+  background-color: #16a34a;
+  color: white;
+  border: 2px solid #16a34a;
+}
+
+.btn-success:hover {
+  background-color: #15803d;
+  border-color: #15803d;
+}
+
+/* Responsive utilities */
+@media (max-width: 767px) {
+  .col-lg-3, .col-lg-4, .col-md-6 { width: 100%; margin-bottom: 1rem; }
+}

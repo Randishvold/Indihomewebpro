@@ -45,7 +45,7 @@ export default {
     'active',
     'fonts-loaded',
     'gpu-accelerated',
-    // Font Awesome classes - remove pattern that doesn't work
+    // Font Awesome classes - all icons used in website
     'fas',
     'fab',
     'far',
@@ -59,6 +59,30 @@ export default {
     'fa-map-marker-alt',
     'fa-map',
     'fa-search',
-    'fa-envelope'
+    'fa-envelope',
+    'fa-tools',
+    'fa-wifi',
+    'fa-check-circle',
+    'fa-home',
+    'fa-users',
+    'fa-phone',
+    'fa-clock',
+    'fa-info-circle',
+    'fa-plus',
+    'fa-arrow-up',
+    'fa-paper-plane',
+    // Bootstrap-like utilities
+    'me-2',
+    'fa-2x',
+    'feature-icon-success',
+    'feature-icon-info',
+    'btn-success',
+    'row',
+    'col-12',
+    'col-lg-3',
+    'col-lg-4',
+    'col-md-6',
+    'g-4',
+    'mb-5'
   ]
 }

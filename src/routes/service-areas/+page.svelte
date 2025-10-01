@@ -351,54 +351,44 @@
 </section>
 
 <!-- Coverage Stats Section -->
-<section class="py-5 bg-light">
+<section class="py-12 bg-light">
 	<div class="container">
-		<div class="row text-center">
-			<div class="col-12 mb-5">
-				<h2 class="fw-bold text-dark mb-3">Jangkauan Jaringan Kami</h2>
-				<p class="text-muted">Statistik coverage area fiber optic Indihome</p>
-			</div>
+		<div class="text-center mb-8">
+			<h2 class="fw-bold text-dark mb-4 text-3xl">Jangkauan Jaringan Kami</h2>
+			<p class="text-muted text-lg">Statistik coverage area fiber optic Indihome</p>
 		</div>
 
-		<div class="row g-4">
-			<div class="col-lg-3 col-md-6">
-				<div class="text-center" use:fadeIn>
-					<div class="feature-icon">
-						<i class="fas fa-map fa-2x"></i>
-					</div>
-					<h3 class="fw-bold text-primary">2</h3>
-					<p class="text-muted">Kabupaten</p>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+			<div class="text-center" use:fadeIn>
+				<div class="feature-icon mx-auto">
+					<i class="fas fa-map text-2xl"></i>
 				</div>
+				<h3 class="fw-bold text-primary">2</h3>
+				<p class="text-muted">Kabupaten</p>
 			</div>
 
-			<div class="col-lg-3 col-md-6">
-				<div class="text-center" use:fadeIn>
-					<div class="feature-icon">
-						<i class="fas fa-map-marker-alt fa-2x"></i>
-					</div>
-					<h3 class="fw-bold text-primary">38</h3>
-					<p class="text-muted">Kecamatan</p>
+			<div class="text-center" use:fadeIn>
+				<div class="feature-icon mx-auto">
+					<i class="fas fa-map-marker-alt text-2xl"></i>
 				</div>
+				<h3 class="fw-bold text-primary">38</h3>
+				<p class="text-muted">Kecamatan</p>
 			</div>
 
-			<div class="col-lg-3 col-md-6">
-				<div class="text-center" use:fadeIn>
-					<div class="feature-icon">
-						<i class="fas fa-home fa-2x"></i>
-					</div>
-					<h3 class="fw-bold text-primary">95%</h3>
-					<p class="text-muted">Coverage Area</p>
+			<div class="text-center" use:fadeIn>
+				<div class="feature-icon mx-auto">
+					<i class="fas fa-home text-2xl"></i>
 				</div>
+				<h3 class="fw-bold text-primary">95%</h3>
+				<p class="text-muted">Coverage Area</p>
 			</div>
 
-			<div class="col-lg-3 col-md-6">
-				<div class="text-center" use:fadeIn>
-					<div class="feature-icon">
-						<i class="fas fa-users fa-2x"></i>
-					</div>
-					<h3 class="fw-bold text-primary">10K+</h3>
-					<p class="text-muted">Pelanggan</p>
+			<div class="text-center" use:fadeIn>
+				<div class="feature-icon mx-auto">
+					<i class="fas fa-users text-2xl"></i>
 				</div>
+				<h3 class="fw-bold text-primary">10K+</h3>
+				<p class="text-muted">Pelanggan</p>
 			</div>
 		</div>
 	</div>
@@ -463,7 +453,7 @@
 			class="btn btn-light btn-lg"
 			on:click={trackWhatsAppClick}
 		>
-			<i class="fab fa-whatsapp me-2"></i>Cek Sekarang
+			<i class="fab fa-whatsapp mr-2"></i>Cek Sekarang
 		</a>
 	</div>
 </section>
