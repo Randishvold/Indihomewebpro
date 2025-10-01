@@ -59,9 +59,6 @@
 <svelte:head>
 	<title>{data.meta.title}</title>
 	<meta name="description" content={data.meta.description} />
-	
-	<!-- Preload critical resources -->
-	<link rel="preload" href="/app.css" as="style" />
 </svelte:head>
 
 <Header />

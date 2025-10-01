@@ -45,8 +45,20 @@ export default {
     'active',
     'fonts-loaded',
     'gpu-accelerated',
-    {
-      pattern: /^(fa|fab|fas|far)-/,
-    }
+    // Font Awesome classes - remove pattern that doesn't work
+    'fas',
+    'fab',
+    'far',
+    'fa-rocket',
+    'fa-whatsapp',
+    'fa-bolt',
+    'fa-shield-alt',
+    'fa-headset',
+    'fa-check',
+    'fa-map-marked-alt',
+    'fa-map-marker-alt',
+    'fa-map',
+    'fa-search',
+    'fa-envelope'
   ]
 }
