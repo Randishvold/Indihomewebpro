@@ -16,17 +16,17 @@
 	}
 </script>
 
-<div class="col-lg-4 col-md-6 mb-4" use:fadeIn>
-	<div class="card h-100">
-		<div class="card-body d-flex flex-column p-5">
-			<h3 class="fw-bold text-primary">{pkg.name}</h3>
-			<div class="price-display my-4">
-				<span class="display-5 fw-bold">Rp {pkg.price}</span>
-				<small class="text-muted">/bulan</small>
+<div class="max-w-md mx-auto lg:mx-0 mb-6" use:fadeIn>
+	<div class="card h-full">
+		<div class="card-body flex flex-col">
+			<h3 class="fw-bold text-primary text-xl mb-2">{pkg.name}</h3>
+			<div class="price-display my-6">
+				<span class="text-4xl fw-bold">Rp {pkg.price}</span>
+				<small class="text-muted text-base">/bulan</small>
 			</div>
-			<ul class="list-unstyled mb-4">
+			<ul class="space-y-3 mb-6">
 				{#each pkg.features as feature (feature)}
-					<li class="mb-2"><i class="fas fa-check text-success me-2"></i>{feature}</li>
+					<li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>{feature}</li>
 				{/each}
 			</ul>
 			<div class="mt-auto">
@@ -34,7 +34,7 @@
 				<a
 					href={pkg.wa_link}
 					target="_blank"
-					class="btn btn-outline-primary w-100"
+					class="btn btn-outline-primary w-full"
 					on:click={trackWhatsAppClick}
 				>
 					Pesan Sekarang

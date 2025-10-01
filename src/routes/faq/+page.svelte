@@ -2,6 +2,11 @@
 	import { fadeIn } from '$lib/actions.js';
 	let searchTerm = '';
 	let filter = 'all';
+	let openFaq = null;
+
+	function toggleFaq(id) {
+		openFaq = openFaq === id ? null : id;
+	}
 
 	const faqs = [
 		{
@@ -131,30 +136,30 @@
 </script>
 
 <!-- Hero Section -->
-<section class="bg-primary text-white py-5">
+<section class="bg-primary text-white py-12">
 	<div class="container">
-		<div class="row text-center">
-			<div class="col-12">
-				<h1 class="display-5 fw-bold mb-3">Pertanyaan yang Sering Diajukan</h1>
-				<p class="lead">Temukan jawaban atas pertanyaan umum seputar layanan Indihome</p>
+		<div class="text-center">
+			<div class="max-w-4xl mx-auto">
+				<h1 class="text-4xl lg:text-5xl fw-bold mb-4">Pertanyaan yang Sering Diajukan</h1>
+				<p class="text-xl opacity-90">Temukan jawaban atas pertanyaan umum seputar layanan Indihome</p>
 			</div>
 		</div>
 	</div>
 </section>
 
 <!-- Search FAQ Section -->
-<section class="py-4 bg-light">
+<section class="py-8 bg-light">
 	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-6">
-				<div class="input-group">
+		<div class="flex justify-center">
+			<div class="w-full lg:w-1/2">
+				<div class="relative">
 					<input
 						type="text"
-						class="form-control"
+						class="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
 						placeholder="Cari pertanyaan..."
 						bind:value={searchTerm}
 					/>
-					<span class="input-group-text">
+					<span class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400">
 						<i class="fas fa-search"></i>
 					</span>
 				</div>
@@ -164,20 +169,19 @@
 </section>
 
 <!-- FAQ Categories -->
-<section class="py-5">
+<section class="py-12">
 	<div class="container">
-		<div class="row mb-4">
-			<div class="col-12">
-				<div class="d-flex flex-wrap justify-content-center gap-2">
-					<button
-						class="btn btn-outline-primary"
-						class:active={filter === 'all'}
-						on:click={() => setFilter('all')}>Semua</button
-					>
-					<button
-						class="btn btn-outline-primary"
-						class:active={filter === 'paket'}
-						on:click={() => setFilter('paket')}>Paket & Harga</button
+		<div class="mb-8">
+			<div class="flex flex-wrap justify-center gap-2">
+				<button
+					class="btn btn-outline-primary"
+					class:active={filter === 'all'}
+					on:click={() => setFilter('all')}>Semua</button
+				>
+				<button
+					class="btn btn-outline-primary"
+					class:active={filter === 'paket'}
+					on:click={() => setFilter('paket')}>Paket & Harga</button
 					>
 					<button
 						class="btn btn-outline-primary"
@@ -203,56 +207,52 @@
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-12">
-				<div class="accordion" id="faqAccordion">
-					{#each filteredFaqs as faq, i}
-						<div class="accordion-item faq-item" use:fadeIn>
-							<h2 class="accordion-header">
-								<button
-									class="accordion-button collapsed"
-									type="button"
-									data-bs-toggle="collapse"
-									data-bs-target="#faq-{faq.id}"
-								>
-									{faq.question}
-								</button>
-							</h2>
-							<div
-								id="faq-{faq.id}"
-								class="accordion-collapse collapse"
-								data-bs-parent="#faqAccordion"
-							>
-								<div class="accordion-body">
+		<div class="max-w-4xl mx-auto">
+			<div class="space-y-4">
+				{#each filteredFaqs as faq, i}
+					<div class="bg-white border rounded-lg shadow-sm" use:fadeIn>
+						<button
+							class="w-full text-left p-6 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 rounded-lg"
+							type="button"
+							on:click={() => toggleFaq(faq.id)}
+						>
+							<div class="flex items-center justify-between">
+								<span class="text-lg fw-bold text-gray-900">{faq.question}</span>
+								<i class="fas fa-chevron-down transform transition-transform duration-200" 
+								   class:rotate-180={openFaq === faq.id}></i>
+							</div>
+						</button>
+						{#if openFaq === faq.id}
+							<div class="px-6 pb-6">
+								<div class="prose text-gray-600">
 									{@html faq.answer}
 								</div>
 							</div>
-						</div>
-					{/each}
-				</div>
+						{/if}
+					</div>
+				{/each}
 			</div>
 		</div>
-	</div>
 </section>
 
 <!-- Still Have Questions Section -->
-<section class="py-5 bg-light">
+<section class="py-12 bg-light">
 	<div class="container">
-		<div class="row text-center">
-			<div class="col-12">
-				<h3 class="fw-bold mb-3">Masih Ada Pertanyaan?</h3>
-				<p class="text-muted mb-4">Tim sales kami siap membantu Anda dengan pertanyaan apapun</p>
-				<div class="d-flex flex-wrap justify-content-center gap-3">
+		<div class="text-center">
+			<div class="max-w-2xl mx-auto">
+				<h3 class="fw-bold mb-4 text-2xl lg:text-3xl">Masih Ada Pertanyaan?</h3>
+				<p class="text-muted mb-6 text-lg">Tim sales kami siap membantu Anda dengan pertanyaan apapun</p>
+				<div class="flex flex-wrap justify-center gap-3">
 					<a
 						href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20Indihome"
 						target="_blank"
 						class="btn btn-success btn-lg"
 						on:click={trackWhatsAppClick}
 					>
-						<i class="fab fa-whatsapp me-2"></i>Chat WhatsApp
+						<i class="fab fa-whatsapp mr-2"></i>Chat WhatsApp
 					</a>
 					<a href="/contact" class="btn btn-outline-primary btn-lg">
-						<i class="fas fa-envelope me-2"></i>Kontak Kami
+						<i class="fas fa-envelope mr-2"></i>Kontak Kami
 					</a>
 				</div>
 			</div>

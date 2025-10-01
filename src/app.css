@@ -1,526 +1,245 @@
 /* src/app.css */
-
-/*--------------------------------------------------------------
-# Font & Color Variables
---------------------------------------------------------------*/
-:root {
-  /* Fonts */
-  --font-default: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    sans-serif;
-  --font-heading: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, sans-serif;
-
-  /* Colors */
-  --color-background: #ffffff;
-  --color-surface: #f8f9fa;
-  --color-text: #212529;
-  --color-muted: #6c757d;
-  --color-primary: #c50000; /* A slightly deeper, more premium red */
-  --color-primary-light: #ffeded;
-  --color-secondary: #495057;
-  --color-accent: #ffc107;
-  --color-border: #dee2e6;
-
-  /* Spacing & Radius */
-  --spacing-unit: 1rem;
-  --border-radius: 0.5rem;
-  --section-padding: 5rem 0;
-  --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
-  --card-shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.12);
-}
-
-/*--------------------------------------------------------------
-# Base Styles
---------------------------------------------------------------*/
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-default);
-  color: var(--color-text);
-  background-color: var(--color-background);
-  line-height: 1.7;
-  overflow-x: hidden;
-}
-
-/*--------------------------------------------------------------
-# Typography
---------------------------------------------------------------*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  color: var(--color-secondary);
-  margin-bottom: calc(var(--spacing-unit) * 1.5);
-}
-
-.display-1,
-.display-2,
-.display-3,
-.display-4,
-.display-5,
-.display-6 {
-  font-weight: 700;
-}
-
-p {
-  margin-bottom: var(--spacing-unit);
-}
-
-a,
-a:visited {
-  color: inherit;
-  text-decoration: none;
-}
-
-a {
-  color: var(--color-primary);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-/*--------------------------------------------------------------
-# Buttons
---------------------------------------------------------------*/
-.btn {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  padding: 0.75rem 1.75rem;
-  border-radius: var(--border-radius);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    background-color 0.3s ease,
-    border-color 0.3s ease;
-  border: 1px solid transparent;
-  letter-spacing: 0.5px;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--card-shadow-hover);
-}
-
-.btn-primary {
-  background-color: var(--color-primary);
-  color: white;
-  border-color: var(--color-primary);
-}
-
-.btn-primary:hover {
-  background-color: #a00000;
-  border-color: #a00000;
-  color: white;
-}
-
-.btn-outline-primary {
-  color: var(--color-primary);
-  border-color: var(--color-primary);
-}
-
-.btn-outline-primary:hover {
-  background-color: #a00000;
-  color: white;
-  border-color: #a00000;
-}
-
-.btn-outline-primary.active {
-  background-color: var(--color-primary);
-  color: white;
-  border-color: var(--color-primary);
-}
-
-.btn-light {
-  background-color: var(--color-background);
-  color: var(--color-text);
-  border-color: var(--color-border);
-}
-
-.btn-light:hover {
-  background-color: #a00000;
-  color: white;
-  border-color: #a00000;
-}
-
-.btn-lg {
-  padding: 1rem 2.5rem;
-  font-size: 1.1rem;
-}
-
-.btn-primary:hover {
-  background-color: #a00000 !important;
-  border-color: #a00000 !important;
-}
-
-.btn-light:hover {
-  background-color: #a00000 !important;
-  color: white !important;
-  border-color: #a00000 !important;
-}
-
-.btn-outline-primary:hover {
-  background-color: #a00000 !important;
-  color: white !important;
-  border-color: #a00000 !important;
-}
-
-/*--------------------------------------------------------------
-# Sections & Containers
---------------------------------------------------------------*/
-section {
-  padding: var(--section-padding);
-}
-
-.bg-light {
-  background-color: var(--color-surface) !important;
-}
-
-/*--------------------------------------------------------------
-# Cards
---------------------------------------------------------------*/
-.card {
-  border: none;
-  border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-  height: 100%;
-  overflow: hidden;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--card-shadow-hover);
-}
-
-.card-body {
-  padding: calc(var(--spacing-unit) * 2);
-}
-
-.card-header,
-.card-footer {
-  background-color: transparent;
-  border-color: var(--color-border);
-  padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 2);
-}
-
-/*--------------------------------------------------------------
-# Header / Navbar
---------------------------------------------------------------*/
-.navbar {
-  padding: 1.5rem 0;
-  transition:
-    background-color 0.3s ease,
-    padding 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.navbar-brand {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.navbar-nav .nav-link {
-  font-family: var(--font-heading);
-  font-weight: 500;
-  color: var(--color-text) !important;
-  margin: 0 0.75rem;
-  padding: 0.5rem 0 !important;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--color-primary);
-  transition: width 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-  color: var(--color-primary) !important;
-}
-
-.navbar-nav .nav-link:hover::after,
-.navbar-nav .nav-link.active::after {
-  width: 100%;
-}
-
-/* Scrolled Navbar */
-.navbar-scrolled {
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  padding: 1rem 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
-.hero-section {
-  background:
-    linear-gradient(45deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)),
-    url('/hero-bg.webp') center center no-repeat;
-  background-size: cover;
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  padding: 6rem 0;
-}
-
-.hero-section .display-4 {
-  color: var(--color-secondary);
-  font-weight: 700;
-}
-
-.hero-section .lead {
-  font-size: 1.25rem;
-  color: var(--color-muted);
-  max-width: 500px;
-}
-
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-footer {
-  background-color: var(--color-secondary);
-  color: var(--color-surface);
-}
-
-footer a {
-  color: var(--color-surface);
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: var(--color-primary);
-}
-
-footer .text-muted {
-  color: #adb5bd !important;
-}
-
-/*--------------------------------------------------------------
-# Utility Classes
---------------------------------------------------------------*/
-.text-primary {
-  color: var(--color-primary) !important;
-}
-
-.bg-primary {
-  background-color: var(--color-primary) !important;
-}
-
-.text-muted {
-  color: var(--color-muted) !important;
-}
-
-.fw-bold {
-  font-weight: 600 !important; /* Adjusted for Poppins */
-}
-
-/*--------------------------------------------------------------
-# Animations
---------------------------------------------------------------*/
-.feature-icon {
-  width: 80px;
-  height: 80px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  background-color: var(--color-primary-light);
-  color: var(--color-primary);
-}
-
-.feature-icon-success {
-  width: 80px;
-  height: 80px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  background-color: #e6f9ee;
-  color: #25d366;
-}
-
-.feature-icon-info {
-  width: 80px;
-  height: 80px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  background-color: #e8f7f9;
-  color: #17a2b8;
-}
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition:
-    opacity 0.6s ease-out,
-    transform 0.6s ease-out;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/*--------------------------------------------------------------
-# Responsive
---------------------------------------------------------------*/
-@media (max-width: 992px) {
-  .hero-section {
-    text-align: center;
-  }
-  .hero-section .lead {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media (max-width: 768px) {
-  :root {
-    --section-padding: 3rem 0;
-  }
-  h1,
-  .display-4 {
-    font-size: 2.5rem;
-  }
-}
-
-/* Fix for low contrast on popular package card price */
-.card.border-primary .price-display .fw-bold,
-.card-header.bg-primary .price-display .fw-bold {
-    color: #FFFFFF !important; /* Membuat teks harga menjadi putih di background merah */
-}
-
-/* Fix for low contrast on outline button */
-.btn-outline-primary {
-    /* Sedikit menggelapkan warna teks agar lebih kontras di background terang */
-    color: #a00000; 
-}
-
-.btn-outline-primary:hover {
-    /* Pastikan warna teks tetap putih saat di-hover */
-    color: white !important;
-}
-
-.navbar {
-  padding: 1.5rem 0;
-  background-color: transparent; /* Awalnya transparan */
-  transition: all 0.4s ease-out; /* Animasi transisi yang lebih halus */
-}
-
-/* Style Navbar saat di-scroll */
-.navbar-scrolled {
-  background-color: rgba(255, 255, 255, 0.85); /* Warna putih semi-transparan */
-  backdrop-filter: saturate(180%) blur(15px); /* Efek blur modern */
-  -webkit-backdrop-filter: saturate(180%) blur(15px); /* Untuk Safari */
-  padding: 1rem 0;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-brand {
-  transition: all 0.3s ease;
-}
-.navbar-brand:hover {
-  opacity: 0.8;
-}
-
-/* Animasi untuk garis bawah link navigasi */
-.navbar-nav .nav-link {
-  position: relative;
-  transition: color 0.3s ease-out;
-}
-
-.navbar-nav .nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) scaleX(0);
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-primary);
-  transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-.navbar-nav .nav-link:hover::after,
-.navbar-nav .nav-link.active::after {
-  transform: translateX(-50%) scaleX(1);
-}
-
-/* Kustomisasi Tampilan Mobile */
-@media (max-width: 991.98px) {
-  .navbar-collapse {
-    background-color: var(--color-background);
-    padding: 1.5rem;
-    margin-top: 1rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--card-shadow-hover);
-  }
-
-  .navbar-nav .nav-item {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 0.5rem;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
   }
   
-  .navbar-nav .nav-link.active::after {
-    transform: translateX(-50%) scaleX(0.3); /* Underline lebih kecil di mobile */
+  body {
+    font-family: theme('fontFamily.sans');
+    @apply text-gray-800 bg-white leading-relaxed overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: theme('fontFamily.heading');
+    @apply font-semibold text-secondary mb-6;
+  }
+
+  .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+    @apply font-bold;
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  a {
+    @apply text-primary no-underline transition-colors duration-300;
+  }
+
+  main {
+    @apply pt-20;
+  }
+
+  main > section:first-child {
+    @apply pt-0;
   }
 }
 
-/* Memberi ruang di atas konten utama seukuran tinggi navbar */
-main {
-  padding-top: 80px; /* Sesuaikan angka ini jika perlu */
-}
+@layer components {
+  /* Navbar Styles */
+  .navbar {
+    @apply py-4 transition-all duration-300 ease-in-out;
+    background: rgba(248, 249, 250, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
 
-/* Mengurangi padding atas di section pertama setelah main */
-main > section:first-child {
-    padding-top: 0;
-}
+  .navbar-scrolled {
+    @apply bg-white shadow-md py-3;
+    backdrop-filter: blur(10px);
+  }
 
-/* ===== PERBAIKAN WEBSITE ===== */
+  .navbar-brand {
+    @apply text-primary text-xl font-bold no-underline hover:text-primary-dark transition-colors;
+  }
 
-/* 1. Mencegah horizontal scroll di seluruh halaman */
-body {
-  overflow-x: hidden;
-}
-
-/* 2. Memastikan menu mobile SELALU punya background putih */
-/* Ini penting untuk versi build agar tidak transparan */
-@media (max-width: 991.98px) {
   .navbar-collapse {
-    background-color: var(--color-background) !important; 
-    padding: 1.5rem;
-    margin-top: 1rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--card-shadow-hover);
-    border: 1px solid var(--color-border);
+    @apply absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-200 p-4;
+  }
+
+  .nav-link {
+    @apply text-gray-700 font-medium px-4 py-2 rounded-md transition-all duration-200 hover:text-primary hover:bg-primary-light;
+  }
+
+  .nav-link.active {
+    @apply text-white bg-primary font-semibold;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    @apply min-h-screen flex items-center py-24;
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%);
+    color: white;
+  }
+
+  .hero-section .display-4 {
+    @apply text-white font-bold;
+  }
+
+  .hero-section .lead {
+    @apply text-xl text-gray-100 max-w-lg;
+  }
+
+  /* Feature Icons */
+  .feature-icon {
+    @apply w-20 h-20 inline-flex items-center justify-center rounded-full mb-4 bg-primary-light text-primary;
+  }
+
+  .feature-icon-success {
+    @apply w-20 h-20 inline-flex items-center justify-center rounded-full mb-4 bg-green-100 text-green-500;
+  }
+
+  .feature-icon-info {
+    @apply w-20 h-20 inline-flex items-center justify-center rounded-full mb-4 bg-cyan-100 text-cyan-600;
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white border border-gray-200 rounded-xl shadow-lg transition-all duration-300 h-full overflow-hidden;
+  }
+
+  .card:hover {
+    @apply shadow-xl -translate-y-1;
+  }
+
+  .card-body {
+    @apply p-6;
+  }
+
+  .card-header, .card-footer {
+    @apply bg-gray-50 border-gray-200 py-4 px-6;
+  }
+
+  /* Buttons */
+  .btn {
+    font-family: theme('fontFamily.heading');
+    @apply font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-transparent tracking-wide inline-flex items-center justify-center;
+  }
+
+  .btn:hover {
+    @apply shadow-lg;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white border-primary hover:bg-primary-dark hover:border-primary-dark;
+  }
+
+  .btn-outline-primary {
+    @apply text-primary-dark border-2 border-primary bg-transparent hover:bg-primary hover:text-white;
+  }
+
+  .btn-outline-primary:hover {
+    @apply bg-primary text-white border-primary;
+  }
+
+  .btn-outline-primary.active {
+    @apply bg-primary text-white border-primary;
+  }
+
+  .btn-light {
+    @apply bg-white text-gray-800 border border-gray-300 hover:bg-gray-50 hover:border-gray-400;
+  }
+
+  .btn-success {
+    @apply bg-green-600 text-white border-green-600 hover:bg-green-700 hover:border-green-700;
+  }
+
+  .btn-info {
+    @apply bg-blue-600 text-white border-blue-600 hover:bg-blue-700 hover:border-blue-700;
+  }
+
+  .btn-lg {
+    @apply py-4 px-8 text-lg;
+  }
+
+  .btn-sm {
+    @apply py-2 px-4 text-sm;
+  }
+
+  /* Forms */
+  .form-control, .form-select {
+    @apply w-full px-4 py-3 text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all;
+  }
+
+  .form-control:disabled, .form-select:disabled {
+    @apply bg-gray-100 text-gray-500 cursor-not-allowed;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-2;
+  }
+
+  /* Text Styles */
+  .text-muted {
+    @apply text-gray-600;
+  }
+
+  .fw-bold {
+    @apply font-bold;
+  }
+
+  .lead {
+    @apply text-lg text-gray-600 mb-6;
+  }
+
+  /* Background Sections */
+  .bg-light {
+    @apply bg-gray-50;
+  }
+
+  /* Container */
+  .container {
+    @apply max-w-7xl mx-auto px-4;
+  }
+
+  /* Spacing Adjustments - Reduce excessive whitespace */
+  .py-12 {
+    @apply py-8;
+  }
+
+  .mb-8 {
+    @apply mb-6;
+  }
+
+  /* Utilities */
+  .w-15 {
+    width: 3.75rem;
+  }
+
+  .h-15 {
+    height: 3.75rem;
+  }
+
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
+
+  .prose {
+    max-width: none;
+  }
+
+  .prose p {
+    margin-bottom: 1rem;
+  }
+
+  .prose ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .prose li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@layer utilities {
+  @media (max-width: 1023px) {
+    .navbar-collapse {
+      @apply bg-white p-6 mt-4 rounded-lg shadow-lg border border-gray-200;
+    }
   }
 }

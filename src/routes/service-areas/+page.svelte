@@ -106,67 +106,69 @@
 </svelte:head>
 
 <!-- Hero Section -->
-<section class="bg-primary text-white py-5">
+<section class="bg-primary text-white py-12">
 	<div class="container">
-		<div class="row text-center">
-			<div class="col-12">
-				<h1 class="display-5 fw-bold mb-3">Area Layanan Kami</h1>
-				<p class="lead">Jangkauan fiber optic Indihome di wilayah Majalengka dan Sumedang</p>
+		<div class="text-center">
+			<div class="max-w-4xl mx-auto">
+				<h1 class="text-4xl lg:text-5xl fw-bold mb-4">Area Layanan Kami</h1>
+				<p class="text-xl opacity-90">Jangkauan fiber optic Indihome di wilayah Majalengka dan Sumedang</p>
 			</div>
 		</div>
 	</div>
 </section>
 
 <!-- Coverage Check Section -->
-<section class="py-5 bg-light">
+<section class="py-12 bg-light">
 	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-8">
+		<div class="flex justify-center">
+			<div class="w-full lg:w-2/3">
 				<div class="card border-0 shadow-sm" use:fadeIn>
-					<div class="card-body p-5 text-center">
-						<h3 class="fw-bold mb-4">Cek Ketersediaan Jaringan</h3>
-						<p class="text-muted mb-4">
+					<div class="card-body p-8 text-center">
+						<h3 class="fw-bold mb-6 text-2xl lg:text-3xl">Cek Ketersediaan Jaringan</h3>
+						<p class="text-muted mb-6 text-lg">
 							Masukkan alamat lengkap Anda untuk mengecek ketersediaan jaringan fiber optic Indihome
 						</p>
 
-						<form on:submit|preventDefault={handleCoverageCheck} class="row g-3">
-							<div class="col-md-6">
-								<select
-									class="form-select"
-									bind:value={selectedKabupaten}
-									on:change={handleKabupatenChange}
-									required
-								>
-									<option value="">Pilih Kabupaten</option>
-									<option value="majalengka">Kabupaten Majalengka</option>
-									<option value="sumedang">Kabupaten Sumedang</option>
-								</select>
+						<form on:submit|preventDefault={handleCoverageCheck} class="space-y-4">
+							<div class="grid grid-cols-1 gap-4">
+								<div>
+									<select
+										class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+										bind:value={selectedKabupaten}
+										on:change={handleKabupatenChange}
+										required
+									>
+										<option value="">Pilih Kabupaten</option>
+										<option value="majalengka">Kabupaten Majalengka</option>
+										<option value="sumedang">Kabupaten Sumedang</option>
+									</select>
+								</div>
+								<div>
+									<select
+										class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
+										bind:value={selectedKecamatan}
+										required
+										disabled={!selectedKabupaten}
+									>
+										<option value="">Pilih Kecamatan</option>
+										{#each kecamatanOptions as kecamatan}
+											<option value={kecamatan}>{kecamatan}</option>
+										{/each}
+									</select>
+								</div>
 							</div>
-							<div class="col-md-6">
-								<select
-									class="form-select"
-									bind:value={selectedKecamatan}
-									required
-									disabled={!selectedKabupaten}
-								>
-									<option value="">Pilih Kecamatan</option>
-									{#each kecamatanOptions as kecamatan}
-										<option value={kecamatan}>{kecamatan}</option>
-									{/each}
-								</select>
-							</div>
-							<div class="col-12">
+							<div>
 								<textarea
-									class="form-control"
+									class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
 									bind:value={alamat}
 									rows="3"
 									placeholder="Alamat lengkap (nama jalan, nomor rumah, RT/RW)"
 									required
 								></textarea>
 							</div>
-							<div class="col-12">
+							<div class="text-center">
 								<button type="submit" class="btn btn-primary btn-lg">
-									<i class="fas fa-search me-2"></i>Cek Ketersediaan
+									<i class="fas fa-search mr-2"></i>Cek Ketersediaan
 								</button>
 							</div>
 						</form>
@@ -178,85 +180,85 @@
 </section>
 
 <!-- Service Areas Section -->
-<section class="py-5">
+<section class="py-12">
 	<div class="container">
-		<div class="row">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 			<!-- Majalengka -->
-			<div class="col-lg-6 mb-5" use:fadeIn>
-				<div class="card h-100 border-0 shadow-sm">
-					<div class="card-header bg-primary text-white">
-						<h4 class="fw-bold mb-0">
-							<i class="fas fa-map-marker-alt me-2"></i>Kabupaten Majalengka
+			<div use:fadeIn>
+				<div class="card h-full border-0 shadow-sm">
+					<div class="bg-primary text-white px-6 py-4">
+						<h4 class="fw-bold mb-0 text-xl">
+							<i class="fas fa-map-marker-alt mr-3"></i>Kabupaten Majalengka
 						</h4>
 					</div>
-					<div class="card-body">
-						<p class="text-muted mb-4">
+					<div class="card-body p-6">
+						<p class="text-muted mb-6">
 							Jangkauan fiber optic tersedia di seluruh kecamatan di Kabupaten Majalengka
 						</p>
 
-						<div class="row g-3">
-							<div class="col-md-6">
-								<div class="d-flex align-items-center mb-2">
-									<i class="fas fa-check-circle text-success me-2"></i>
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+							<div class="space-y-3">
+								<div class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-3"></i>
 									<span>Majalengka</span>
 								</div>
-								<div class="d-flex align-items-center mb-2">
-									<i class="fas fa-check-circle text-success me-2"></i>
+								<div class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-3"></i>
 									<span>Cigasong</span>
 								</div>
-								<div class="d-flex align-items-center mb-2">
-									<i class="fas fa-check-circle text-success me-2"></i>
+								<div class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-3"></i>
 									<span>Jatiwangi</span>
 								</div>
-								<div class="d-flex align-items-center mb-2">
-									<i class="fas fa-check-circle text-success me-2"></i>
+								<div class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-3"></i>
 									<span>Dawuan</span>
 								</div>
-								<div class="d-flex align-items-center mb-2">
-									<i class="fas fa-check-circle text-success me-2"></i>
+								<div class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-3"></i>
 									<span>Kadipaten</span>
 								</div>
-								<div class="d-flex align-items-center mb-2">
-									<i class="fas fa-check-circle text-success me-2"></i>
+								<div class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-3"></i>
 									<span>Kertajati</span>
 								</div>
 							</div>
-							<div class="col-md-6">
-								<div class="d-flex align-items-center mb-2">
-									<i class="fas fa-check-circle text-success me-2"></i>
+							<div class="space-y-3">
+								<div class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-3"></i>
 									<span>Jatitujuh</span>
 								</div>
-								<div class="d-flex align-items-center mb-2">
-									<i class="fas fa-check-circle text-success me-2"></i>
+								<div class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-3"></i>
 									<span>Ligung</span>
 								</div>
-								<div class="d-flex align-items-center mb-2">
-									<i class="fas fa-check-circle text-success me-2"></i>
+								<div class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-3"></i>
 									<span>Sumber</span>
 								</div>
-								<div class="d-flex align-items-center mb-2">
-									<i class="fas fa-check-circle text-success me-2"></i>
+								<div class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-3"></i>
 									<span>Panyingkiran</span>
 								</div>
-								<div class="d-flex align-items-center mb-2">
-									<i class="fas fa-check-circle text-success me-2"></i>
+								<div class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-3"></i>
 									<span>Talaga</span>
 								</div>
-								<div class="d-flex align-items-center mb-2">
-									<i class="fas fa-check-circle text-success me-2"></i>
+								<div class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-3"></i>
 									<span>Sukahaji</span>
 								</div>
 							</div>
 						</div>
 
-						<div class="mt-4">
+						<div class="mt-6">
 							<a
 							href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20cek%20ketersediaan%20jaringan%20di%20Majalengka"
 							target="_blank"
 							class="btn btn-outline-primary"
 							on:click={trackWhatsAppClick}
 						>
-							<i class="fab fa-whatsapp me-2"></i>Cek Jaringan Majalengka
+							<i class="fab fa-whatsapp mr-2"></i>Cek Jaringan Majalengka
 						</a>
 						</div>
 					</div>
@@ -264,82 +266,82 @@
 			</div>
 
 			<!-- Sumedang -->
-			<div class="col-lg-6 mb-5" use:fadeIn>
-				<div class="card h-100 border-0 shadow-sm">
-					<div class="card-header bg-primary text-white">
-						<h4 class="fw-bold mb-0">
-							<i class="fas fa-map-marker-alt me-2"></i>Kabupaten Sumedang
+			<div use:fadeIn>
+				<div class="card h-full border-0 shadow-sm">
+					<div class="bg-primary text-white px-6 py-4">
+						<h4 class="fw-bold mb-0 text-xl">
+							<i class="fas fa-map-marker-alt mr-3"></i>Kabupaten Sumedang
 						</h4>
 					</div>
-					<div class="card-body">
-						<p class="text-muted mb-4">
+					<div class="card-body p-6">
+						<p class="text-muted mb-6">
 							Jangkauan fiber optic tersedia di seluruh kecamatan di Kabupaten Sumedang
 						</p>
 
-						<div class="row g-3">
-							<div class="col-md-6">
-								<div class="d-flex align-items-center mb-2">
-									<i class="fas fa-check-circle text-success me-2"></i>
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+							<div class="space-y-3">
+								<div class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-3"></i>
 									<span>Sumedang Utara</span>
 								</div>
-								<div class="d-flex align-items-center mb-2">
-									<i class="fas fa-check-circle text-success me-2"></i>
+								<div class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-3"></i>
 									<span>Sumedang Selatan</span>
 								</div>
-								<div class="d-flex align-items-center mb-2">
-									<i class="fas fa-check-circle text-success me-2"></i>
+								<div class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-3"></i>
 									<span>Cimalaka</span>
 								</div>
-								<div class="d-flex align-items-center mb-2">
-									<i class="fas fa-check-circle text-success me-2"></i>
+								<div class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-3"></i>
 									<span>Tanjungsari</span>
 								</div>
-								<div class="d-flex align-items-center mb-2">
-									<i class="fas fa-check-circle text-success me-2"></i>
+								<div class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-3"></i>
 									<span>Pamulihan</span>
 								</div>
-								<div class="d-flex align-items-center mb-2">
-									<i class="fas fa-check-circle text-success me-2"></i>
+								<div class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-3"></i>
 									<span>Cisitu</span>
 								</div>
 							</div>
-							<div class="col-md-6">
-								<div class="d-flex align-items-center mb-2">
-									<i class="fas fa-check-circle text-success me-2"></i>
+							<div class="space-y-3">
+								<div class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-3"></i>
 									<span>Wado</span>
 								</div>
-								<div class="d-flex align-items-center mb-2">
-									<i class="fas fa-check-circle text-success me-2"></i>
+								<div class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-3"></i>
 									<span>Jatigede</span>
 								</div>
-								<div class="d-flex align-items-center mb-2">
-									<i class="fas fa-check-circle text-success me-2"></i>
+								<div class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-3"></i>
 									<span>Darmaraja</span>
 								</div>
-								<div class="d-flex align-items-center mb-2">
-									<i class="fas fa-check-circle text-success me-2"></i>
+								<div class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-3"></i>
 									<span>Ganeas</span>
 								</div>
-								<div class="d-flex align-items-center mb-2">
-									<i class="fas fa-check-circle text-success me-2"></i>
+								<div class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-3"></i>
 									<span>Tomo</span>
 								</div>
-								<div class="d-flex align-items-center mb-2">
-									<i class="fas fa-check-circle text-success me-2"></i>
+								<div class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-3"></i>
 									<span>Jatinangor</span>
 								</div>
 							</div>
 						</div>
 
-						<div class="mt-4">
+						<div class="mt-6">
 							<a
-							href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20cek%20ketersediaan%20jaringan%20di%20Sumedang"
-							target="_blank"
-							class="btn btn-outline-primary"
-							on:click={trackWhatsAppClick}
-						>
-							<i class="fab fa-whatsapp me-2"></i>Cek Jaringan Sumedang
-						</a>
+								href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20cek%20ketersediaan%20jaringan%20di%20Sumedang"
+								target="_blank"
+								class="btn btn-outline-primary"
+								on:click={trackWhatsAppClick}
+							>
+								<i class="fab fa-whatsapp mr-2"></i>Cek Jaringan Sumedang
+							</a>
 						</div>
 					</div>
 				</div>
@@ -403,78 +405,48 @@
 </section>
 
 <!-- Installation Process -->
-<section class="py-5">
+<section class="py-12">
 	<div class="container">
-		<div class="row text-center mb-5">
-			<div class="col-12">
-				<h2 class="fw-bold text-dark mb-3">Proses Instalasi</h2>
-				<p class="text-muted">Langkah mudah untuk mendapatkan internet Indihome di rumah Anda</p>
-			</div>
+		<div class="text-center mb-8">
+			<h2 class="text-3xl fw-bold text-gray-800 mb-4">Proses Instalasi</h2>
+			<p class="text-muted">Langkah mudah untuk mendapatkan internet Indihome di rumah Anda</p>
 		</div>
 
-		<div class="row g-4">
-			<div class="col-lg-3 col-md-6">
-				<div class="text-center" use:fadeIn>
-					<div class="position-relative">
-						<div
-							class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center text-white fw-bold mb-3"
-							style="width: 60px; height: 60px;"
-						>
-							1
-						</div>
-					</div>
-					<h5 class="fw-bold mb-3">Konsultasi</h5>
-					<p class="text-muted">
-						Hubungi sales untuk konsultasi paket dan cek ketersediaan jaringan
-					</p>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+			<div class="text-center" use:fadeIn>
+				<div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+					1
 				</div>
+				<h5 class="fw-bold mb-3">Konsultasi</h5>
+				<p class="text-muted">
+					Hubungi sales untuk konsultasi paket dan cek ketersediaan jaringan
+				</p>
 			</div>
 
-			<div class="col-lg-3 col-md-6">
-				<div class="text-center" use:fadeIn>
-					<div class="position-relative">
-						<div
-							class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center text-white fw-bold mb-3"
-							style="width: 60px; height: 60px;"
-						>
-							2
-						</div>
-					</div>
-					<h5 class="fw-bold mb-3">Survey</h5>
-					<p class="text-muted">
-						Tim teknis melakukan survey lokasi untuk memastikan kemungkinan instalasi
-					</p>
+			<div class="text-center" use:fadeIn>
+				<div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+					2
 				</div>
+				<h5 class="fw-bold mb-3">Survey</h5>
+				<p class="text-muted">
+					Tim teknis melakukan survey lokasi untuk memastikan kemungkinan instalasi
+				</p>
 			</div>
 
-			<div class="col-lg-3 col-md-6">
-				<div class="text-center" use:fadeIn>
-					<div class="position-relative">
-						<div
-							class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center text-white fw-bold mb-3"
-							style="width: 60px; height: 60px;"
-						>
-							3
-						</div>
-					</div>
-					<h5 class="fw-bold mb-3">Instalasi</h5>
-					<p class="text-muted">Pemasangan kabel fiber optic dan perangkat ke rumah Anda</p>
+			<div class="text-center" use:fadeIn>
+				<div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+					3
 				</div>
+				<h5 class="fw-bold mb-3">Instalasi</h5>
+				<p class="text-muted">Pemasangan kabel fiber optic dan perangkat ke rumah Anda</p>
 			</div>
 
-			<div class="col-lg-3 col-md-6">
-				<div class="text-center" use:fadeIn>
-					<div class="position-relative">
-						<div
-							class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center text-white fw-bold mb-3"
-							style="width: 60px; height: 60px;"
-						>
-							4
-						</div>
-					</div>
-					<h5 class="fw-bold mb-3">Aktivasi</h5>
-					<p class="text-muted">Testing koneksi dan aktivasi layanan internet Indihome</p>
+			<div class="text-center" use:fadeIn>
+				<div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+					4
 				</div>
+				<h5 class="fw-bold mb-3">Aktivasi</h5>
+				<p class="text-muted">Testing koneksi dan aktivasi layanan internet Indihome</p>
 			</div>
 		</div>
 	</div>

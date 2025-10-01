@@ -124,27 +124,27 @@
 </svelte:head>
 
 <!-- Hero Section -->
-<section class="bg-primary text-white py-5">
+<section class="bg-primary text-white py-12">
 	<div class="container">
-		<div class="row text-center">
-			<div class="col-12">
-				<h1 class="display-5 fw-bold mb-3">Hubungi Kami</h1>
-				<p class="lead">Sales profesional siap membantu Anda 24/7</p>
+		<div class="text-center">
+			<div class="max-w-4xl mx-auto">
+				<h1 class="text-4xl lg:text-5xl fw-bold mb-4">Hubungi Kami</h1>
+				<p class="text-xl opacity-90">Sales profesional siap membantu Anda 24/7</p>
 			</div>
 		</div>
 	</div>
 </section>
 
 <!-- Contact Methods Section -->
-<section class="py-5">
+<section class="py-12">
 	<div class="container">
-		<div class="row g-4">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 			<!-- WhatsApp -->
-			<div class="col-lg-4 col-md-6" use:fadeIn>
-				<div class="card h-100 border-0 shadow-sm">
-					<div class="card-body text-center p-4">
-					<div class="feature-icon-success">
-							<i class="fab fa-whatsapp fa-2x"></i>
+			<div use:fadeIn>
+				<div class="card h-full border-0 shadow-sm">
+					<div class="card-body text-center p-6">
+					<div class="feature-icon-success mx-auto">
+							<i class="fab fa-whatsapp text-2xl"></i>
 						</div>
 						<h5 class="fw-bold mb-3">WhatsApp</h5>
 						<p class="fw-bold text-dark mb-3">+62 851-6972-7821</p>						<a
@@ -186,7 +186,7 @@
 						<h5 class="fw-bold mb-3">Email</h5>
 						<p class="text-muted mb-3">Kirim pertanyaan atau permintaan informasi melalui email</p>
 						<p class="fw-bold text-dark mb-3">riri.sfim@protonmail.com</p>
-						<a href="mailto:riri.sfim@protonmail.com" class="btn btn-primary text-white">
+						<a href="mailto:riri.sfim@protonmail.com" class="btn btn-primary">
 							<i class="fas fa-envelope me-2"></i>Kirim Email
 						</a>
 					</div>
@@ -197,120 +197,111 @@
 </section>
 
 <!-- Contact Form Section -->
-<section class="py-5 bg-light">
+<section class="py-12 bg-light">
 	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-8">
+		<div class="flex justify-center">
+			<div class="w-full lg:w-2/3">
 				<div class="card border-0 shadow-sm" use:fadeIn>
-					<div class="card-header bg-white border-0 text-center py-4">
-						<h3 class="fw-bold mb-0">Formulir Kontak</h3>
+					<div class="bg-white border-0 text-center py-6">
+						<h3 class="fw-bold mb-0 text-2xl lg:text-3xl">Formulir Kontak</h3>
 						<p class="text-muted mt-2">
 							Isi formulir di bawah ini untuk mendapatkan informasi lengkap
 						</p>
 					</div>
-					<div class="card-body p-5">
-						<form on:submit|preventDefault={handleSubmit}>
-							<div class="row g-3">
-								<div class="col-md-6">
-									<label for="nama" class="form-label">Nama Lengkap *</label>
-									<input type="text" class="form-control" id="nama" bind:value={nama} required />
-								</div>
-								<div class="col-md-6">
-									<label for="telepon" class="form-label">Nomor Telepon *</label>
+					<div class="card-body p-8">
+						<form on:submit|preventDefault={handleSubmit} class="space-y-4">
+							<div>
+								<label for="nama" class="block text-sm font-medium text-gray-700 mb-2">Nama Lengkap *</label>
+								<input type="text" class="form-control" id="nama" bind:value={nama} required />
+							</div>
+							<div>
+								<label for="telepon" class="block text-sm font-medium text-gray-700 mb-2">Nomor Telepon *</label>
+								<input type="tel" class="form-control" id="telepon" bind:value={telepon} required />
+							</div>
+							<div>
+								<label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+								<input type="email" class="form-control" id="email" bind:value={email} />
+							</div>
+							<div>
+								<label for="kabupaten" class="block text-sm font-medium text-gray-700 mb-2">Kabupaten *</label>
+								<select
+									class="form-select"
+									id="kabupaten"
+									bind:value={selectedKabupaten}
+									on:change={handleKabupatenChange}
+									required
+								>
+									<option value="">Pilih Kabupaten</option>
+									<option value="majalengka">Kabupaten Majalengka</option>
+									<option value="sumedang">Kabupaten Sumedang</option>
+								</select>
+							</div>
+							<div>
+								<label for="kecamatan" class="block text-sm font-medium text-gray-700 mb-2">Kecamatan *</label>
+								<select
+									class="form-select"
+									id="kecamatan"
+									bind:value={selectedKecamatan}
+									required
+									disabled={!selectedKabupaten}
+								>
+									<option value="">Pilih Kecamatan</option>
+									{#each kecamatanOptions as kecamatan}
+										<option value={kecamatan}>{kecamatan}</option>
+									{/each}
+								</select>
+							</div>
+							<div>
+								<label for="alamat" class="block text-sm font-medium text-gray-700 mb-2">Alamat Lengkap *</label>
+								<textarea
+									class="form-control"
+									id="alamat"
+									rows="3"
+									placeholder="Jalan, nomor rumah, RT/RW, kelurahan/desa"
+									bind:value={alamat}
+									required
+								></textarea>
+							</div>
+							<div>
+								<label for="keperluan" class="block text-sm font-medium text-gray-700 mb-2">Keperluan *</label>
+								<select class="form-select" id="keperluan" bind:value={keperluan} required>
+									<option value="">Pilih Keperluan</option>
+									<option value="daftar">Daftar Paket Baru</option>
+									<option value="upgrade">Upgrade Paket</option>
+									<option value="konsultasi">Konsultasi Paket</option>
+									<option value="cek_jaringan">Cek Ketersediaan Jaringan</option>
+									<option value="keluhan">Keluhan Layanan</option>
+									<option value="info">Informasi Umum</option>
+								</select>
+							</div>
+							<div>
+								<label for="pesan" class="block text-sm font-medium text-gray-700 mb-2">Pesan/Pertanyaan</label>
+								<textarea
+									class="form-control"
+									id="pesan"
+									rows="4"
+									placeholder="Tuliskan pertanyaan atau informasi tambahan..."
+									bind:value={pesan}
+								></textarea>
+							</div>
+							<div>
+								<div class="flex items-start">
 									<input
-										type="tel"
-										class="form-control"
-										id="telepon"
-										bind:value={telepon}
+										class="mt-1 h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary"
+										type="checkbox"
+										id="setuju"
+										bind:checked={setuju}
 										required
 									/>
+									<label class="ml-3 text-sm text-gray-700" for="setuju">
+										Saya setuju untuk dihubungi melalui WhatsApp/Telepon untuk keperluan follow up *
+									</label>
 								</div>
-								<div class="col-12">
-									<label for="email" class="form-label">Email</label>
-									<input type="email" class="form-control" id="email" bind:value={email} />
-								</div>
-								<div class="col-md-6">
-									<label for="kabupaten" class="form-label">Kabupaten *</label>
-									<select
-										class="form-select"
-										id="kabupaten"
-										bind:value={selectedKabupaten}
-										on:change={handleKabupatenChange}
-										required
-									>
-										<option value="">Pilih Kabupaten</option>
-										<option value="majalengka">Kabupaten Majalengka</option>
-										<option value="sumedang">Kabupaten Sumedang</option>
-									</select>
-								</div>
-								<div class="col-md-6">
-									<label for="kecamatan" class="form-label">Kecamatan *</label>
-									<select
-										class="form-select"
-										id="kecamatan"
-										bind:value={selectedKecamatan}
-										required
-										disabled={!selectedKabupaten}
-									>
-										<option value="">Pilih Kecamatan</option>
-										{#each kecamatanOptions as kecamatan}
-											<option value={kecamatan}>{kecamatan}</option>
-										{/each}
-									</select>
-								</div>
-								<div class="col-12">
-									<label for="alamat" class="form-label">Alamat Lengkap *</label>
-									<textarea
-										class="form-control"
-										id="alamat"
-										rows="3"
-										placeholder="Jalan, nomor rumah, RT/RW, kelurahan/desa"
-										bind:value={alamat}
-										required
-									></textarea>
-								</div>
-								<div class="col-12">
-									<label for="keperluan" class="form-label">Keperluan *</label>
-									<select class="form-select" id="keperluan" bind:value={keperluan} required>
-										<option value="">Pilih Keperluan</option>
-										<option value="daftar">Daftar Paket Baru</option>
-										<option value="upgrade">Upgrade Paket</option>
-										<option value="konsultasi">Konsultasi Paket</option>
-										<option value="cek_jaringan">Cek Ketersediaan Jaringan</option>
-										<option value="keluhan">Keluhan Layanan</option>
-										<option value="info">Informasi Umum</option>
-									</select>
-								</div>
-								<div class="col-12">
-									<label for="pesan" class="form-label">Pesan/Pertanyaan</label>
-									<textarea
-										class="form-control"
-										id="pesan"
-										rows="4"
-										placeholder="Tuliskan pertanyaan atau informasi tambahan..."
-										bind:value={pesan}
-									></textarea>
-								</div>
-								<div class="col-12">
-									<div class="form-check">
-										<input
-											class="form-check-input"
-											type="checkbox"
-											id="setuju"
-											bind:checked={setuju}
-											required
-										/>
-										<label class="form-check-label" for="setuju">
-											Saya setuju untuk dihubungi melalui WhatsApp/Telepon untuk keperluan follow up
-											*
-										</label>
-									</div>
-								</div>
-								<div class="col-12">
-									<button type="submit" class="btn btn-primary btn-lg w-100">
-										<i class="fas fa-paper-plane me-2"></i>Kirim Pesan
-									</button>
-								</div>
+							</div>
+							<div>
+								<button type="submit" class="btn btn-lg w-full btn-success">
+									<i class="fas fa-paper-plane mr-2"></i>Kirim ke WhatsApp
+								</button>
 							</div>
 						</form>
 					</div>
@@ -321,33 +312,33 @@
 </section>
 
 <!-- Office Hours Section -->
-<section class="py-5">
+<section class="py-12">
 	<div class="container">
-		<div class="row">
-			<div class="col-lg-6 mb-4" use:fadeIn>
-				<div class="card h-100 border-0 shadow-sm">
-					<div class="card-body p-4">
-						<h4 class="fw-bold mb-4">
-							<i class="fas fa-clock text-primary me-2"></i>Jam Operasional
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+			<div use:fadeIn>
+				<div class="card h-full border-0 shadow-sm">
+					<div class="card-body p-6">
+						<h4 class="fw-bold mb-6 text-xl">
+							<i class="fas fa-clock text-primary mr-3"></i>Jam Operasional
 						</h4>
 
-						<div class="row">
-							<div class="col-6">
-								<div class="mb-3">
+						<div class="grid grid-cols-2 gap-6">
+							<div>
+								<div class="mb-4">
 									<h6 class="fw-bold">WhatsApp</h6>
 									<p class="text-muted mb-0">24 Jam / 7 Hari</p>
 								</div>
-								<div class="mb-3">
+								<div class="mb-4">
 									<h6 class="fw-bold">Telepon</h6>
 									<p class="text-muted mb-0">08:00 - 20:00 WIB</p>
 								</div>
 							</div>
-							<div class="col-6">
-								<div class="mb-3">
+							<div>
+								<div class="mb-4">
 									<h6 class="fw-bold">Email</h6>
 									<p class="text-muted mb-0">Respon dalam 24 jam</p>
 								</div>
-								<div class="mb-3">
+								<div class="mb-4">
 									<h6 class="fw-bold">Survey</h6>
 									<p class="text-muted mb-0">Senin - Sabtu</p>
 								</div>
@@ -357,32 +348,32 @@
 				</div>
 			</div>
 
-			<div class="col-lg-6 mb-4" use:fadeIn>
-				<div class="card h-100 border-0 shadow-sm">
-					<div class="card-body p-4">
-						<h4 class="fw-bold mb-4">
-							<i class="fas fa-info-circle text-primary me-2"></i>Informasi Penting
+			<div use:fadeIn>
+				<div class="card h-full border-0 shadow-sm">
+					<div class="card-body p-6">
+						<h4 class="fw-bold mb-6 text-xl">
+							<i class="fas fa-info-circle text-primary mr-3"></i>Informasi Penting
 						</h4>
 
-						<ul class="list-unstyled">
-							<li class="mb-2">
-								<i class="fas fa-check text-success me-2"></i>
+						<ul class="space-y-3">
+							<li class="flex items-center">
+								<i class="fas fa-check text-green-500 mr-3"></i>
 								Konsultasi gratis untuk semua paket
 							</li>
-							<li class="mb-2">
-								<i class="fas fa-check text-success me-2"></i>
+							<li class="flex items-center">
+								<i class="fas fa-check text-green-500 mr-3"></i>
 								Survey lokasi tanpa biaya
 							</li>
-							<li class="mb-2">
-								<i class="fas fa-check text-success me-2"></i>
+							<li class="flex items-center">
+								<i class="fas fa-check text-green-500 mr-3"></i>
 								Proses pendaftaran mudah dan cepat
 							</li>
-							<li class="mb-2">
-								<i class="fas fa-check text-success me-2"></i>
+							<li class="flex items-center">
+								<i class="fas fa-check text-green-500 mr-3"></i>
 								Instalasi gratis untuk semua paket
 							</li>
-							<li class="mb-2">
-								<i class="fas fa-check text-success me-2"></i>
+							<li class="flex items-center">
+								<i class="fas fa-check text-green-500 mr-3"></i>
 								Sales berpengalaman dan terpercaya
 							</li>
 						</ul>
@@ -394,54 +385,54 @@
 </section>
 
 <!-- Quick Actions Section -->
-<section class="py-5 bg-primary text-white">
+<section class="py-12 bg-primary text-white">
 	<div class="container">
-		<div class="row text-center">
-			<div class="col-12 mb-4">
-				<h2 class="fw-bold mb-3">Aksi Cepat</h2>
-				<p class="lead">Pilih tindakan yang ingin Anda lakukan</p>
+		<div class="text-center mb-8">
+			<div class="max-w-2xl mx-auto">
+				<h2 class="fw-bold mb-4 text-3xl lg:text-4xl">Aksi Cepat</h2>
+				<p class="text-xl opacity-90">Pilih tindakan yang ingin Anda lakukan</p>
 			</div>
 		</div>
 
-		<div class="row g-3 justify-content-center">
-			<div class="col-lg-3 col-md-6">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+			<div>
 				<a
 					href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20 saya%20ingin%20daftar%20paket%20Indihome%20baru"
 					target="_blank"
-					class="btn btn-light btn-lg w-100"
+					class="btn btn-light btn-lg w-full"
 					on:click={trackWhatsAppClick}
 				>
-					<i class="fas fa-plus me-2"></i>Daftar Baru
+					<i class="fas fa-plus mr-2"></i>Daftar Baru
 				</a>
 			</div>
-			<div class="col-lg-3 col-md-6">
+			<div>
 				<a
 					href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20 saya%20ingin%20upgrade%20paket%20Indihome%20saya"
 					target="_blank"
-					class="btn btn-light btn-lg w-100"
+					class="btn btn-light btn-lg w-full"
 					on:click={trackWhatsAppClick}
 				>
-					<i class="fas fa-arrow-up me-2"></i>Upgrade Paket
+					<i class="fas fa-arrow-up mr-2"></i>Upgrade Paket
 				</a>
 			</div>
-			<div class="col-lg-3 col-md-6">
+			<div>
 				<a
 					href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20 saya%20ingin%20cek%20ketersediaan%20jaringan%20di%20lokasi%20saya"
 					target="_blank"
-					class="btn btn-light btn-lg w-100"
+					class="btn btn-light btn-lg w-full"
 					on:click={trackWhatsAppClick}
 				>
-					<i class="fas fa-search me-2"></i>Cek Jaringan
+					<i class="fas fa-search mr-2"></i>Cek Jaringan
 				</a>
 			</div>
-			<div class="col-lg-3 col-md-6">
+			<div>
 				<a
 					href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20 saya%20ingin%20konsultasi%20masalah%20internet%20saya"
 					target="_blank"
-					class="btn btn-light btn-lg w-100"
+					class="btn btn-light btn-lg w-full"
 					on:click={trackWhatsAppClick}
 				>
-					<i class="fas fa-headset me-2"></i>Bantuan
+					<i class="fas fa-headset mr-2"></i>Bantuan
 				</a>
 			</div>
 		</div>
