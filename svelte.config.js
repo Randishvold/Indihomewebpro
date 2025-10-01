@@ -6,7 +6,19 @@ const config = {
     preprocess: vitePreprocess(),
 
     kit: {
-        adapter: adapter()
+        adapter: adapter(),
+        prerender: {
+            handleHttpError: 'warn',
+            handleMissingId: 'warn'
+        },
+        csp: {
+            directives: {
+                'script-src': ['self', 'unsafe-inline', 'https://www.googletagmanager.com'],
+                'style-src': ['self', 'unsafe-inline', 'https://fonts.googleapis.com', 'https://cdnjs.cloudflare.com'],
+                'font-src': ['self', 'https://fonts.gstatic.com', 'https://cdnjs.cloudflare.com'],
+                'connect-src': ['self', 'https://www.google-analytics.com']
+            }
+        }
     }
 };
 

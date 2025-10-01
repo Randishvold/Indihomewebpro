@@ -1,23 +1,31 @@
 <script>
 	import { fadeIn } from '$lib/actions.js';
+	import { onMount } from 'svelte';
+	
+	let heroLoaded = false;
+	
 	function trackWhatsAppClick() {
 		console.log('WhatsApp link clicked');
-		// In a real application, you would add your analytics tracking code here.
 	}
+
+	onMount(() => {
+		// Ensure hero section is prioritized
+		heroLoaded = true;
+	});
 </script>
 
 <section class="hero-section">
 	<div class="container">
 		<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
 			<div class="lg:col-span-7 xl:col-span-6 text-center lg:text-left">
-				<h1 class="display-4 fw-bold mb-6 text-4xl lg:text-5xl" use:fadeIn>
+				<h1 class="display-4 fw-bold mb-6 text-4xl lg:text-5xl">
 					Koneksi Internet Cepat & Stabil di Majalengka dan Sumedang
 				</h1>
-				<p class="lead mb-8" use:fadeIn={{ delay: 200 }}>
+				<p class="lead mb-8">
 					Pilih paket internet fiber optik dari Indihome untuk streaming, game, dan kerja tanpa
 					hambatan. Sales resmi siap membantu Anda.
 				</p>
-				<div class="flex flex-wrap gap-3 justify-center lg:justify-start" use:fadeIn={{ delay: 400 }}>
+				<div class="flex flex-wrap gap-3 justify-center lg:justify-start">
 					<a href="/packages" class="btn btn-primary btn-lg">
 						<i class="fas fa-rocket mr-2"></i>Lihat Semua Paket
 					</a>
@@ -49,10 +57,8 @@
 
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 			<div class="text-center" use:fadeIn>
-				<div class="card p-6">
-					<div
-						class="feature-icon mx-auto"
-					>
+				<div class="card p-6 gpu-accelerated">
+					<div class="feature-icon mx-auto">
 						<i class="fas fa-bolt text-2xl"></i>
 					</div>
 					<h3 class="fw-bold mb-4 text-xl">Kecepatan Tinggi</h3>
@@ -63,11 +69,9 @@
 				</div>
 			</div>
 
-			<div class="text-center" use:fadeIn={{ delay: 200 }}>
-				<div class="card p-6">
-					<div
-						class="feature-icon mx-auto"
-					>
+			<div class="text-center" use:fadeIn={{ delay: 100 }}>
+				<div class="card p-6 gpu-accelerated">
+					<div class="feature-icon mx-auto">
 						<i class="fas fa-shield-alt text-2xl"></i>
 					</div>
 					<h3 class="fw-bold mb-4 text-xl">Jaringan Stabil</h3>
@@ -77,11 +81,9 @@
 				</div>
 			</div>
 
-			<div class="text-center" use:fadeIn={{ delay: 400 }}>
-				<div class="card p-6">
-					<div
-						class="feature-icon mx-auto"
-					>
+			<div class="text-center" use:fadeIn={{ delay: 200 }}>
+				<div class="card p-6 gpu-accelerated">
+					<div class="feature-icon mx-auto">
 						<i class="fas fa-headset text-2xl"></i>
 					</div>
 					<h3 class="fw-bold mb-4 text-xl">Layanan Prioritas</h3>
@@ -108,7 +110,7 @@
 
 		<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 justify-center">
 			<div class="max-w-md mx-auto lg:mx-0" use:fadeIn>
-				<div class="card">
+				<div class="card gpu-accelerated">
 					<div class="card-body">
 						<h3 class="fw-bold text-primary text-xl mb-2">EZnet 20Mbps</h3>
 						<div class="price-display my-6">
@@ -135,8 +137,8 @@
 				</div>
 			</div>
 
-			<div class="max-w-md mx-auto lg:mx-0" use:fadeIn={{ delay: 200 }}>
-				<div class="card border-2 border-primary">
+			<div class="max-w-md mx-auto lg:mx-0" use:fadeIn={{ delay: 100 }}>
+				<div class="card border-2 border-primary gpu-accelerated">
 					<div class="card-body">
 						<div class="inline-block bg-primary text-white px-3 py-1 rounded text-sm mb-4">TERPOPULER</div>
 						<h3 class="fw-bold text-primary text-xl mb-2">50Mbps Internet</h3>
@@ -164,8 +166,8 @@
 				</div>
 			</div>
 
-			<div class="max-w-md mx-auto lg:mx-0" use:fadeIn={{ delay: 400 }}>
-				<div class="card">
+			<div class="max-w-md mx-auto lg:mx-0" use:fadeIn={{ delay: 200 }}>
+				<div class="card gpu-accelerated">
 					<div class="card-body">
 						<h3 class="fw-bold text-primary text-xl mb-2">One Dynamic 50Mbps</h3>
 						<div class="price-display my-6">
@@ -206,7 +208,7 @@
 	<div class="container">
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
 			<div use:fadeIn>
-				<div class="bg-light rounded-lg p-8">
+				<div class="bg-light rounded-lg p-8 gpu-accelerated">
 					<i class="fas fa-map-marked-alt text-primary text-6xl block mb-6"></i>
 					<h2 class="fw-bold text-gray-800 mb-6 text-2xl lg:text-3xl">Jangkauan Hingga Pelosok</h2>
 					<p class="text-muted text-lg">
@@ -215,7 +217,7 @@
 					</p>
 				</div>
 			</div>
-			<div use:fadeIn={{ delay: 200 }}>
+			<div use:fadeIn={{ delay: 100 }}>
 				<h2 class="fw-bold text-gray-800 mb-6 text-2xl lg:text-3xl">Area Layanan Kami</h2>
 				<p class="text-muted mb-6 text-xl">
 					Kami berkomitmen untuk menyediakan layanan terbaik di seluruh wilayah cakupan kami.

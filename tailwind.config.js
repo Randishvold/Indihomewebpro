@@ -38,4 +38,15 @@ export default {
   plugins: [
     require('@tailwindcss/typography'),
   ],
+  safelist: [
+    'visible',
+    'fade-in', 
+    'navbar-scrolled',
+    'active',
+    'fonts-loaded',
+    'gpu-accelerated',
+    {
+      pattern: /^(fa|fab|fas|far)-/,
+    }
+  ]
 }
