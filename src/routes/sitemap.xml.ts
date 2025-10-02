@@ -1,3 +1,5 @@
+export const prerender = false;
+
 import { PUBLIC_BASE_URL } from '$env/static/public';
 
 // Define your static pages here

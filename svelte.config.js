@@ -1,8 +1,3 @@
-console.log("--- Checking Environment Variables during build ---");
-console.log("PUBLIC_BASE_URL:", process.env.PUBLIC_BASE_URL);
-console.log("PUBLIC_GA_MEASUREMENT_ID:", process.env.PUBLIC_GA_MEASUREMENT_ID);
-console.log("-------------------------------------------------");
-
 import adapter from '@sveltejs/adapter-netlify';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
