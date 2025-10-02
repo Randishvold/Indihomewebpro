@@ -94,6 +94,31 @@
 <svelte:head>
 	<title>{data.meta.title}</title>
 	<meta name="description" content={data.meta.description} />
+
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "InternetServiceProvider",
+			"name": "Indihome Majalengka & Sumedang",
+			"description": "Sales resmi Indihome untuk wilayah Majalengka dan Sumedang. Dapatkan paket internet fiber optic terbaik dengan harga spesial.",
+			"url": "https://wifimajalengka.my.id",
+			"telephone": "+6285169727821",
+			"provider": {
+				"@type": "Organization",
+				"name": "Telkom Indonesia"
+			},
+			"areaServed": [
+				{
+					"@type": "AdministrativeArea",
+					"name": "Kabupaten Majalengka"
+				},
+				{
+					"@type": "AdministrativeArea",
+					"name": "Kabupaten Sumedang"
+				}
+			]
+		}
+	</script>
 </svelte:head>
 
 <Header />

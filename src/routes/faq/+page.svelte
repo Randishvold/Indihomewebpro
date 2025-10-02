@@ -1,3 +1,136 @@
+<svelte:head>
+    <title>FAQ - Pertanyaan Umum Indihome Majalengka & Sumedang</title>
+    <meta name="description" content="Temukan jawaban atas pertanyaan yang sering diajukan tentang paket, instalasi, teknis, dan pembayaran Indihome di Majalengka dan Sumedang." />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Apa saja paket Indihome yang tersedia di Majalengka dan Sumedang?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Kami menyediakan berbagai paket Indihome: Paket 2P (Internet + Telepon) mulai Rp 315.000/bulan, Paket 3P (Internet + TV + Telepon) mulai Rp 395.000/bulan, dan Paket Gamer mulai Rp 505.000/bulan. Semua paket sudah termasuk WiFi router dan instalasi gratis."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Apakah ada biaya instalasi untuk paket Indihome?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Tidak ada biaya instalasi! Semua paket Indihome di Majalengka dan Sumedang sudah termasuk instalasi gratis, WiFi router gratis, kabel fiber optic, dan setting koneksi."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Apakah bisa upgrade atau downgrade paket?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Ya, Anda bisa melakukan upgrade paket kapan saja atau downgrade paket pada bulan berikutnya dengan menghubungi sales kami. Tidak ada biaya administrasi untuk perubahan paket."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Berapa lama proses instalasi Indihome?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Total waktu dari pendaftaran hingga internet aktif sekitar 5-10 hari kerja, meliputi proses survey lokasi (1-2 hari) dan instalasi (3-7 hari kerja)."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Apa saja syarat untuk instalasi Indihome?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Syarat instalasi Indihome meliputi KTP, bukti kepemilikan/sewa rumah, alamat yang terjangkau jaringan, dan adanya aliran listrik."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Bagaimana cara cek ketersediaan jaringan di alamat saya?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Anda bisa cek ketersediaan jaringan dengan menghubungi sales kami via WhatsApp dengan menyertakan alamat lengkap Anda."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Apa itu teknologi fiber optic dan apa keuntungannya?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Fiber Optic adalah teknologi transmisi data menggunakan serat kaca yang menghantarkan cahaya. Keuntungannya adalah kecepatan super cepat dan stabil, latensi rendah, dan tidak terpengaruh cuaca."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Mengapa internet saya kadang lambat?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Kecepatan internet bisa dipengaruhi oleh jumlah perangkat yang terhubung, aplikasi berat yang digunakan, posisi router, dan penggunaan pada jam sibuk. Solusinya bisa dengan merestart router atau upgrade paket."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Bagaimana jika internet mati total?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Lakukan troubleshooting dengan mengecek lampu indikator router, merestart router, dan memeriksa kabel. Jika masih bermasalah, hubungi customer service di 147."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Bagaimana cara pembayaran tagihan Indihome?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Pembayaran bisa dilakukan secara online (MyIndihome app, internet banking, e-wallet), melalui ATM, minimarket (Alfamart, Indomaret), kantor pos, atau Plasa Telkom. Jatuh tempo setiap tanggal 20."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Apa konsekuensi jika telat bayar tagihan?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Keterlambatan pembayaran dapat mengakibatkan pengingat, pembatasan layanan (suspend), hingga pemutusan permanen. Denda sebesar 2% dari tagihan juga bisa dikenakan."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Bagaimana cara menghubungi customer service?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Anda bisa menghubungi Customer Service Indihome melalui telepon 147 (24/7), MyIndihome App, atau media sosial @TelkomCare. Untuk bantuan personal di area Majalengka & Sumedang, hubungi WhatsApp sales kami."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Apakah ada kontrak minimal berlangganan?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Ya, ada kontrak minimal berlangganan selama 12 bulan. Penalti akan dikenakan jika berhenti berlangganan sebelum kontrak berakhir."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Apakah Indihome cocok untuk Work From Home?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Ya, Indihome sangat cocok untuk WFH karena menawarkan kecepatan upload yang tinggi, latensi rendah, dan koneksi yang stabil. Kami merekomendasikan paket mulai dari 20 Mbps hingga 100+ Mbps tergantung kebutuhan Anda."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Apakah bisa request teknisi untuk kunjungan ke rumah?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Ya, Anda bisa meminta kunjungan teknisi untuk perbaikan gangguan secara gratis. Hubungi 147 atau sales WhatsApp untuk membuat jadwal."
+                    }
+                }
+            ]
+        }
+    </script>
+</svelte:head>
+
 <script>
 	import { fadeIn } from '$lib/actions.js';
 	let searchTerm = '';

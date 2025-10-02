@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /node_modules/
 
-Sitemap: https://pasangindihome.netlify.app/sitemap.xml
+Sitemap: https://wifimajalengka.my.id/sitemap.xml
