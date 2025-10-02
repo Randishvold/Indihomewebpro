@@ -277,7 +277,7 @@ export const rawPackages = [
 			install_fee: 'GRATIS',
 			streaming: 'Vidio Platinum Standard, WeTV iflix, Viu, Catchplay+, Lionsgate Play, Sushiroll, Genflix, Kuncie, Fita, IndihomeTV',
 			devices: '5-7',
-			extra: 'Indihome TV Interaktif 127 channel, STB'
+			extra: 'Berlangganan TV Indihome 127 channel, STB'
 		}
 	},
 	{
@@ -289,7 +289,7 @@ export const rawPackages = [
 			install_fee: 'GRATIS',
 			streaming: 'Vidio Platinum Standard, WeTV iflix, Viu, Catchplay+, Lionsgate Play, Sushiroll, Genflix, Kuncie, Fita, IndihomeTV',
 			devices: '12-15',
-			extra: 'Indihome TV Interaktif 127 channel, STB'
+			extra: 'Berlangganan TV Indihome 127 channel, STB'
 		}
 	},
 
