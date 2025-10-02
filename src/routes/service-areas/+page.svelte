@@ -444,16 +444,18 @@
 
 <!-- CTA Section -->
 <section class="py-5 bg-primary text-white">
-	<div class="container text-center">
-		<h2 class="fw-bold mb-3">Cek Ketersediaan di Alamat Anda</h2>
-		<p class="lead mb-4">Pastikan fiber optic Indihome sudah tersedia di lokasi Anda</p>
-		<a
-			href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20cek%20ketersediaan%20jaringan%20Indihome%20di%20alamat%20saya"
-			target="_blank"
-			class="btn btn-light btn-lg"
-			on:click={trackWhatsAppClick}
-		>
-			<i class="fab fa-whatsapp mr-2"></i>Cek Sekarang
-		</a>
+	<div class="container">
+		<div class="text-center max-w-2xl mx-auto">
+			<h2 class="fw-bold mb-3">Cek Ketersediaan di Alamat Anda</h2>
+			<p class="lead mb-4">Pastikan fiber optic Indihome sudah tersedia di lokasi Anda</p>
+			<a
+				href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20cek%20ketersediaan%20jaringan%20Indihome%20di%20alamat%20saya"
+				target="_blank"
+				class="btn btn-light btn-lg"
+				on:click={trackWhatsAppClick}
+			>
+				<i class="fab fa-whatsapp mr-2"></i>Cek Sekarang
+			</a>
+		</div>
 	</div>
 </section>

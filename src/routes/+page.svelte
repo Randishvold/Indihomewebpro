@@ -1,5 +1,7 @@
 <script>
 	import { fadeIn } from '$lib/actions.js';
+	import { popularPackages } from '$lib/packages.ts';
+	import PackageCard from '$lib/components/PackageCard.svelte';
 	import { onMount } from 'svelte';
 	
 	let heroLoaded = false;
@@ -111,90 +113,9 @@
 		</div>
 
 		<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 justify-center">
-			<div class="max-w-md mx-auto lg:mx-0" use:fadeIn>
-				<div class="card gpu-accelerated">
-					<div class="card-body">
-						<h3 class="fw-bold text-primary text-xl mb-2">EZnet 20Mbps</h3>
-						<div class="price-display my-6">
-							<span class="text-4xl fw-bold">Rp 210.800</span>
-							<small class="text-muted text-base">/bulan</small>
-						</div>
-						<ul class="space-y-3 mb-6">
-							<li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Internet 20 Mbps</li>
-							<li class="flex items-center">
-								<i class="fas fa-check text-green-500 mr-3"></i>Ideal Untuk 5 Perangkat
-							</li>
-							<li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Biaya Pasang Hanya Rp 166.500
-							</li>
-						</ul>
-						<a
-							href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20Paket%202P%20-%20Rp%20315.000"
-							target="_blank"
-							class="btn btn-outline-primary w-full"
-							on:click={trackWhatsAppClick}
-						>
-							Pesan Sekarang
-						</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="max-w-md mx-auto lg:mx-0" use:fadeIn={{ delay: 50 }}>
-				<div class="card border-2 border-primary gpu-accelerated">
-					<div class="card-body">
-						<div class="inline-block bg-primary text-white px-3 py-1 rounded text-sm mb-4">TERPOPULER</div>
-						<h3 class="fw-bold text-primary text-xl mb-2">50Mbps Internet</h3>
-						<div class="price-display my-6">
-							<span class="text-4xl fw-bold">Rp 266.400</span>
-							<small class="text-muted text-base">/bulan</small>
-						</div>
-						<ul class="space-y-3 mb-6">
-							<li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Internet 50 Mbps</li>
-							<li class="flex items-center">
-								<i class="fas fa-check text-green-500 mr-3"></i>Ideal Untuk 8 Perangkat
-							</li>
-							<li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Prime Video</li>
-							<li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>IndiHomeTV</li>
-						</ul>
-						<a
-							href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20Paket%203P%20-%20Rp%20395.000"
-							target="_blank"
-							class="btn btn-primary w-full"
-							on:click={trackWhatsAppClick}
-						>
-							Pesan Sekarang
-						</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="max-w-md mx-auto lg:mx-0" use:fadeIn={{ delay: 100 }}>
-				<div class="card gpu-accelerated">
-					<div class="card-body">
-						<h3 class="fw-bold text-primary text-xl mb-2">One Dynamic 50Mbps</h3>
-						<div class="price-display my-6">
-							<span class="text-4xl fw-bold">Rp 338.550</span>
-							<small class="text-muted text-base">/bulan</small>
-						</div>
-						<ul class="space-y-3 mb-6">
-							<li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Internet 50 Mbps</li>
-							<li class="flex items-center">
-								<i class="fas fa-check text-green-500 mr-3"></i>Kuota Keluarga 30GB
-							</li>
-							<li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Prime Video</li>
-							<li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>IndiHomeTV</li>
-						</ul>
-						<a
-							href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20Paket%20Gamer%20-%20Rp%20505.000"
-							target="_blank"
-							class="btn btn-outline-primary w-full"
-							on:click={trackWhatsAppClick}
-						>
-							Pesan Sekarang
-						</a>
-					</div>
-				</div>
-			</div>
+			{#each popularPackages as pkg, index}
+				<PackageCard {pkg} isPopular={index === 1} compact={true} />
+			{/each}
 		</div>
 
 		<div class="text-center mt-12">

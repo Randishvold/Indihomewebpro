@@ -170,7 +170,7 @@
 						<h5 class="fw-bold mb-3">Telepon</h5>
 						<p class="text-muted mb-3">Hubungi langsung untuk informasi paket dan konsultasi</p>
 						<p class="fw-bold text-dark mb-3">+62 851-6972-7821</p>
-						<a href="tel:+6285169727821" class="btn btn-primary">
+						<a href="tel:+6285169727821" class="btn btn-primary d-inline-flex align-items-center">
 							<i class="fas fa-phone mr-2"></i>Telepon Sekarang
 						</a>
 					</div>
@@ -187,7 +187,7 @@
 						<h5 class="fw-bold mb-3">Email</h5>
 						<p class="text-muted mb-3">Kirim pertanyaan atau permintaan informasi melalui email</p>
 						<p class="fw-bold text-dark mb-3">riri.sfim@protonmail.com</p>
-						<a href="mailto:riri.sfim@protonmail.com" class="btn btn-primary">
+						<a href="mailto:riri.sfim@protonmail.com" class="btn btn-primary d-inline-flex align-items-center">
 							<i class="fas fa-envelope mr-2"></i>Kirim Email
 						</a>
 					</div>
@@ -400,7 +400,8 @@
 				<a
 					href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20daftar%20paket%20Indihome%20baru"
 					target="_blank"
-					class="btn btn-light btn-lg w-full"
+					class="btn btn-light btn-lg w-full d-flex align-items-center justify-content-center"
+					style="min-height: 3.5rem;"
 					on:click={trackWhatsAppClick}
 				>
 					<i class="fas fa-plus mr-2"></i>Daftar Baru
@@ -410,7 +411,8 @@
 				<a
 					href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20upgrade%20paket%20Indihome%20saya"
 					target="_blank"
-					class="btn btn-light btn-lg w-full"
+					class="btn btn-light btn-lg w-full d-flex align-items-center justify-content-center"
+					style="min-height: 3.5rem;"
 					on:click={trackWhatsAppClick}
 				>
 					<i class="fas fa-arrow-up mr-2"></i>Upgrade Paket
@@ -420,7 +422,8 @@
 				<a
 					href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20cek%20ketersediaan%20jaringan%20di%20lokasi%20saya"
 					target="_blank"
-					class="btn btn-light btn-lg w-full"
+					class="btn btn-light btn-lg w-full d-flex align-items-center justify-content-center"
+					style="min-height: 3.5rem;"
 					on:click={trackWhatsAppClick}
 				>
 					<i class="fas fa-search mr-2"></i>Cek Jaringan
@@ -430,7 +433,8 @@
 				<a
 					href="https://api.whatsapp.com/send?phone=6285169727821&text=Halo%2C%20saya%20ingin%20konsultasi%20masalah%20internet%20saya"
 					target="_blank"
-					class="btn btn-light btn-lg w-full"
+					class="btn btn-light btn-lg w-full d-flex align-items-center justify-content-center"
+					style="min-height: 3.5rem;"
 					on:click={trackWhatsAppClick}
 				>
 					<i class="fas fa-headset mr-2"></i>Bantuan
