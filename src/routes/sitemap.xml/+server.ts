@@ -1,4 +1,3 @@
-export const prerender = false;
 
 import { PUBLIC_BASE_URL } from '$env/static/public';
 
